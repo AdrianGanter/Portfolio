@@ -24,3 +24,43 @@ set RHOSTS 10.10.10.5
 set PAYLOAD windows/x64/meterpreter/reverse_tcp
 run
 
+___________________________________________________
+
+Main components of Metasploit are summarized as follows:
+msfconsole - The main command line interface
+Modules - exploits, scanners, payloads etc.
+Tools - helpful tools that assist with vulnerability research, assessment, or penetration testing. 
+Some tools are the following:
+msfvenom, pattern_create, and pattern_offset
+
+___________________________________________________
+
+Modules:
+Auxillary - scanners, crawlers, fuzzers
+Encoders - Allows you to encode the exploit and payload in the hopes that a signature-based antivirus solution may miss them
+Evasion - Modules that will attempt to evade detection of antivirus solutions
+Exploits - expoits, organised by target system
+NOPs - No OPeration, does nothing. Presented in the intel x86 CPU family with 0x90, following which the CPU will do nothing for one cycle. Often used as a buffer to achieve consisten payload sizes
+Payloads - Example payloads are; getting a shell, loading a malware or backdoor to the target system, running a command or launching calc.exe as a proof of concept to add to a pen test report.
+Having an interactive connection that allows you to type commands that will be executed on the target system.
+
+4 directories under Payloads:
+1. Adapters - wraps single payloads to convert them into diffe3rent formats. For example, a single payload could be wrapped in a Powershell adapter, which will make a single powershell command that
+will execute the payload
+2. Singles - Self contained payloads. Do not need to download an additionals component to run
+3. Stagers - Sets up a connection channel between Metasploit and the target system. Good when working with Staged Payloads. Staged Payloads will upload a stager on the target system and then download
+the rest of the payload (stage)
+4. Stages - Downloaded by the stager. This will allow you to use larger sized payloads.
+
+___________________________________________________
+
+Useful commands:
+- help
+- history
+- use (module) eg. use exploit/windows/smb/ms17_010_eternalblue
+- show (options, payloads, auzillary,)
+- back
+- info
+- search eg. (search ms17-010
+
+
