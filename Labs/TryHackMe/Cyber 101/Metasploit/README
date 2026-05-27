@@ -9,5 +9,12 @@ Demonstrated ability to exploit a machine and using meterpreter to gain flag and
 Created a payload and transfered it from attacking machine to target machine, executed it, and returned multiple user password hashes
 
 03 - Meterpreter
+An in-depth look at Meterpreter. The different useful commands we can use.
+- Successfully exploited a virtual machine
+- Checked machine system info
+- Checked the shares, backgrounding session and using enum_shares module
+- Identified PID and migrated to another PID. Hashdump revelaed NTLM hash of a user
+- Converted hash to cleartext password of user
+- Used search to find 2 secret files that contained sensitive information
 
 
