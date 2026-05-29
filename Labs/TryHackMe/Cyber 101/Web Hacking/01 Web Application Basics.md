@@ -25,3 +25,13 @@
 <img width="1140" height="270" alt="image" src="https://github.com/user-attachments/assets/bc310b4d-52de-47ab-b152-3bdf50776cbe" />
 
 
+### TryHackMe Quiz
+
+**Which protocol provides encrypted communication between a browser and a web server?**  
+- **HTTPS**
+
+**What term describes registering misspelled versions of popular domains for malicious use?**  
+- **Typosquatting**
+
+**What part of a URL passes extra info like search terms or form inputs to the server?**  
+- **Query String**
