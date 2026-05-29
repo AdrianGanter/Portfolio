@@ -166,7 +166,9 @@ Used in methods like **POST** and **PUT** when sending data to the server.
 
 ---
 
-## **HTTP Response Headers & Response Body (Short Notes)**
+## **HTTP Response Headers & Response Body**
+
+<img width="1140" height="700" alt="image" src="https://github.com/user-attachments/assets/b2cdf935-4d01-4291-93d5-4bfd96eed29d" />
 
 ### **Response Headers**
 Key–value pairs sent by the server to give the client instructions about how to handle the response.
