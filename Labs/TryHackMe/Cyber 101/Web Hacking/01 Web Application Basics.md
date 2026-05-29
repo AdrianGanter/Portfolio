@@ -35,3 +35,24 @@
 
 **What part of a URL passes extra info like search terms or form inputs to the server?**  
 - **Query String**
+
+---
+
+### **HTTP Messages**
+
+- **HTTP Messages** = Data exchanged between client and server (requests + responses).
+- **Two Types:**
+  - **HTTP Request** – Sent by the client to perform an action.
+  - **HTTP Response** – Sent by the server with the result.
+
+### **Message Structure**
+- **Start Line** – Identifies the message type and how it should be handled.
+- **Headers** – Key–value pairs with extra info (security, content type, instructions).
+- **Empty Line** – Separates headers from the body.
+- **Body** – Actual data (form inputs in requests, webpage/API data in responses).
+
+### **Why It Matters**
+- Core of how web apps communicate.
+- Helps diagnose web issues and improve reliability.
+- Critical for security: understanding structure helps protect data in transit.
+
