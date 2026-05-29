@@ -56,3 +56,40 @@
 - Helps diagnose web issues and improve reliability.
 - Critical for security: understanding structure helps protect data in transit.
 
+### **HTTP Requests**
+
+- **HTTP Request** – Sent by the client to interact with a web app (first point of contact).
+- **Request Line** – Contains: **METHOD /path HTTP/version**.
+- **URL Path** – Identifies the specific resource or endpoint.
+- **HTTP Version** – Defines protocol features (1.1 is still the most widely used).
+
+### **Common HTTP Methods**
+- **GET** – Retrieve data. Avoid exposing sensitive info.
+- **POST** – Send data. Validate inputs to prevent SQLi/XSS.
+- **PUT** – Replace/update resources. Requires strict authorisation.
+- **DELETE** – Remove resources. Must be restricted to authorised users.
+- **PATCH** – Partial updates. Validate to avoid inconsistent data.
+- **HEAD** – Same as GET but returns headers only.
+- **OPTIONS** – Shows allowed methods for a resource.
+- **TRACE** – Debugging; often disabled for security.
+- **CONNECT** – Creates secure tunnels (e.g., HTTPS).
+
+### **Security Notes**
+- Validate and sanitise URL paths.
+- Prevent unauthorised access to sensitive endpoints.
+- Avoid exposing sensitive data in GET requests.
+- Disable unnecessary methods (TRACE/OPTIONS) when not needed.
+
+## TryHackMe Quiz
+
+**Which HTTP protocol version became widely adopted and remains the most commonly used?**  
+- **HTTP/1.1**
+
+**Which HTTP method shows communication options for a resource?**  
+- **OPTIONS**
+
+**Which component specifies the resource/endpoint after the domain?**  
+- **URL Path**
+
+---
+
