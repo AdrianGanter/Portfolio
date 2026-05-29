@@ -1,4 +1,5 @@
 ## Web Application Basics
+
 ### **Front End (What the user sees)**
 - **HTML** – Page structure (the “planet surface”).
 - **CSS** – Visual design: colours, layout, style (makes the planet vibrant).
