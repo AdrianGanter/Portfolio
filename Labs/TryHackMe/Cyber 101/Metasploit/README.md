@@ -72,6 +72,3 @@ Successfully executed a real‑world exploit chain and demonstrated post‑explo
 
 ---
 
-## Why This Structure Works
-- Each section has its own detailed file for deep dives  
-- This overview README gives recruiters
