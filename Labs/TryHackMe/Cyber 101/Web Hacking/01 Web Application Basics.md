@@ -127,3 +127,39 @@ Used in methods like **POST** and **PUT** when sending data to the server.
 **Which part of an HTTP request contains info like host, user agent, and content type?**  
 - **Request Headers**
 
+---
+
+## **HTTP Responses**
+
+- **HTTP Response** – Sent by the server to indicate success, failure, or additional action needed.
+- **Status Line** – Contains:
+  - **HTTP Version**
+  - **Status Code** (numeric outcome)
+  - **Reason Phrase** (short explanation)
+
+### **Status Code Categories**
+- **100–199: Informational** – Request received, continue.
+- **200–299: Success** – Request processed correctly.
+- **300–399: Redirection** – Resource moved; follow new location.
+- **400–499: Client Errors** – Bad request, missing data, unauthorised, etc.
+- **500–599: Server Errors** – Server failed to process the request.
+
+### **Common Status Codes**
+- **100 – Continue** – Server ready for the rest of the request.
+- **200 – OK** – Request succeeded.
+- **301 – Moved Permanently** – Resource now lives at a new URL.
+- **404 – Not Found** – Resource doesn’t exist at the given path.
+- **500 – Internal Server Error** – Server encountered an unexpected issue.
+
+---
+
+## TryHackMe Quiz
+
+**What part of an HTTP response contains version, status code, and reason phrase?**  
+- **Status Line**
+
+**Which category indicates the server encountered an internal issue?**  
+- **Server Error Responses**
+
+**Which status code means the resource could not be found?**  
+- **404**
