@@ -92,4 +92,35 @@
 - **URL Path**
 
 ---
+### **Request Headers & Request Body**
+
+### **Common Request Headers**
+- **Host** – Specifies the domain the request is sent to.
+- **User-Agent** – Identifies the browser or client making the request.
+- **Referer** – Shows the page the request originated from.
+- **Cookie** – Stores server‑assigned data (sessions, preferences, etc.).
+- **Content-Type** – Describes the format of data in the request body.
+
+---
+
+### **Request Body Formats**
+Used in methods like **POST** and **PUT** when sending data to the server.
+
+- **URL Encoded** – `key=value` pairs separated by `&`. Default for HTML forms.
+- **Form Data (multipart/form-data)** – Supports multiple data blocks; used for file uploads.
+- **JSON (application/json)** – Name/value pairs in JSON structure.
+- **XML (application/xml)** – Data wrapped in nested tags.
+
+---
+
+### TryHackMe Quiz
+
+**Which header specifies the domain name of the web server?**  
+- **Host**
+
+**Default content type for key=value form submissions?**  
+- **application/x-www-form-urlencoded**
+
+**Which part of an HTTP request contains info like host, user agent, and content type?**  
+- **Request Headers**
 
