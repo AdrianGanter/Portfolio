@@ -1,4 +1,4 @@
-# Hydra - TryHackMe practical
+# Hydra - TryHackMe Practical
 
 ## Target Information
 Username: molly  
