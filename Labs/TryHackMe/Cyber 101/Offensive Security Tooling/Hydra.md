@@ -1,4 +1,4 @@
-# TryHackMe Notes – Hydra Brute Force & Flags
+# Hydra - TryHackMe practical
 
 ## Target Information
 Username: molly  
