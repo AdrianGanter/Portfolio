@@ -14,16 +14,21 @@ Aspiring SOC Analyst with interests in:
 
 # Portfolio Sections
 
-Cyber Security
+**Cyber Security**
 - TryHackMe Learning
 - Labs and Writeups
 
-Grym Project
+**Security & Emergency Operations Centre (SEOC)**
+- Real-time monitoring and coordination of security and emergency incidents
+- CCTV surveillance, alarm monitoring, incident escalation, and emergency dispatch operations
+- Development of operational tools, process improvements, and support for 24/7 control room operations
+
+**Grym Project**
 - Interactive Streaming Environment
 - Unreal Engine 5 Development
 - Live Production Systems
 
-Bit Crusher
+**Bit Crusher**
 - Project Development
 - Operations
 - Business Management
