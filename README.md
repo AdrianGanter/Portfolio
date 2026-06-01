@@ -2,7 +2,8 @@
 
 ## About Me
 
-Current Security & Emergency Operations Center (SEOC) Operator supporting critical infrastructure.
+Current Security & Emergency Operations Center (SEOC) Operator supporting critical infrastructure. 
+
 Aspiring SOC Analyst with interests in:
 - Threat Detection
 - Incident Response
