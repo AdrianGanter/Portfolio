@@ -139,15 +139,23 @@ Gobuster is a powerful enumeration tool used to identify hidden resources throug
 ## Practical 1
 
 Enumerate directories of www.offensivetools.thm (10.49.146.52)
+
 ```gobuster dir -u http://10.49.146.52 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt```
+
 Directory that stands out: /secret
 Digging deeper..
+
 ```gobuster dir -u http://10.49.146.52/secret -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt```
+
 Found: /content /uploads
 Look for a .js file
+
 ```gobuster dir -u http://10.49.146.52/secret/content -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x .js```
+
 Found: /flag.js
+
 ```curl http://10.49.146.52/secret/content/flag.js```
+
 Flag: THM{ReconWasASuccess}
 
 ---
