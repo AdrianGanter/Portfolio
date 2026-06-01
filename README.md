@@ -1,13 +1,28 @@
-# Cyber Studies
-This repository documents my journey toward becoming a SOC Analyst / Blue Team cybersecurity professional.
+# Security Operations & Technology Portfolio
 
-I currently work in Security & Emergency Operations and am transitioning into cybersecurity through hands-on labs, SIEM training, incident response practice, scripting, and defensive security studies.
+## About Me
 
-This repository contains:
-- SOC lab writeups
-- TryHackMe learning
-- SIEM notes
-- Detection engineering practice
-- Python/PowerShell automation
-- Incident response documentation
-- Security+ study notes
+Current Security & Emergency Operations Center (SEOC) Operator supporting critical infrastructure.
+Aspiring SOC Analyst with interests in:
+- Threat Detection
+- Incident Response
+- Security Operations
+- Automation
+  
+---
+
+# Portfolio Sections
+
+Cyber Security
+- TryHackMe Learning
+- Labs and Writeups
+
+Grym Project
+- Interactive Streaming Environment
+- Unreal Engine 5 Development
+- Live Production Systems
+
+Bit Crusher
+- Project Development
+- Operations
+- Business Management
