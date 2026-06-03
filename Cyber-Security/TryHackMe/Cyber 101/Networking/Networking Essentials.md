@@ -1,4 +1,4 @@
-### Networking Essentials for Cyber Security – Deep Quick-Ref
+### Networking Essentials
 
 #### OSI 7-Layer Security Lens
 | Layer | Threat Surface | Defensive Primitives | Tools/Logs |
