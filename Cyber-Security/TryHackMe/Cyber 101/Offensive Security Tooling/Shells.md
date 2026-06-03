@@ -101,7 +101,7 @@ socat -d -d TCP-LISTEN:<port> STDOUT
 
 ---
 
-# Practical Lab Summary
+# Practical Lab
 
 ## Task 1: Command Injection → Reverse Shell
 
