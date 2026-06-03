@@ -1,4 +1,3 @@
-```markdown
 # Linux Fundamentals
 
 A working knowledge of Linux is essential in a SOC environment for log analysis, incident response, and system investigation. Below is a summary of core concepts and commands I am proficient with.
