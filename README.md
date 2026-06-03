@@ -8,7 +8,7 @@ Aspiring SOC Analyst with interests in:
 - Threat Detection
 - Incident Response
 - Security Operations
-- Automation
+- Technology & Automation
   
 ---
 
