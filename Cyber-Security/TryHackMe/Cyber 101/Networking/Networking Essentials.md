@@ -9,6 +9,8 @@
 - **ARP**: Resolves IP → MAC; protect with **Dynamic ARP Inspection**.  
 - **DHCP**: 4-step handshake (Discover → Offer → Request → ACK) that hands out IPs; prevent rogue servers with **DHCP snooping**.
 
+The primary difference between IPv4 and IPv6 is their address size. IPv4 uses a 32-bit address system offering about 4.3 billion addresses, which are largely exhausted. IPv6 uses a 128-bit address system, providing a practically limitless pool to support modern devices and the internet of things (IoT)
+
 ---
 
 ## 2. OSI 7-Layer Security Lens
