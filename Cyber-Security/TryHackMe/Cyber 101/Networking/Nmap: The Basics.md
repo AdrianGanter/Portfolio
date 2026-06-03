@@ -107,7 +107,7 @@ COMMON SCENARIOS
 
 COMBINED EXAMPLE
 ----------------
-- nmap -sS -sV -O -p- -T4 192.168.0.1
+`nmap -sS -sV -O -p- -T4 192.168.0.1`
   -> Full detailed scan with OS, services, and all ports
 
 SUMMARY FLAGS
