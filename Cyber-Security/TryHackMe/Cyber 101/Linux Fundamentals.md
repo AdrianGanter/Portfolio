@@ -53,4 +53,3 @@ A working knowledge of Linux is essential in a SOC environment for log analysis,
 - **Process analysis:** `ps aux` and `top` support identification of unusual or malicious processes during incident response.
 - **File discovery:** `find` and `grep` enable rapid hunting across the filesystem for indicators of compromise.
 - **`/etc/passwd` & `/etc/shadow`:** Awareness of where Linux stores user credentials (sha512 encrypted) is critical for both defence and forensics.
-```
