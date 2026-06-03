@@ -48,7 +48,7 @@ This can force the query to return true regardless of valid credentials.
 
 ---
 
-## Practical Exercise Walkthrough
+## Walkthrough
 
 ### Target 1: SQL Injection on Search Endpoint
 
@@ -95,7 +95,7 @@ Result:
 
 ---
 
-## Practical Exercise Walkthrough (Login Page)
+## Practical Test (Webpage Login)
 
 ### Target URL
 `http://MACHINE_IP/ai/includes/user_login?email=test&password=test`
