@@ -27,6 +27,7 @@ Aspiring SOC Analyst with interests in:
 - Interactive Streaming Environment
 - Unreal Engine 5 Development
 - Live Production Systems
+- Live Original Music
 
 **Project: Bit Crusher**
 - Project Development
