@@ -1,6 +1,17 @@
-### Networking Essentials
+# Networking Essentials
 
-#### OSI 7-Layer Security Lens
+---
+
+## 1. Core Concepts
+- **IP**: Logical address of a host (IPv4 32-bit, IPv6 128-bit).  
+- **MAC**: 48-bit hardware address; first 24 bits = vendor OUI.  
+- **ICMP**: Ping & traceroute; disable inbound echo to reduce recon.  
+- **ARP**: Resolves IP → MAC; protect with **Dynamic ARP Inspection**.  
+- **DHCP**: 4-step handshake (Discover → Offer → Request → ACK) that hands out IPs; prevent rogue servers with **DHCP snooping**.
+
+---
+
+## 2. OSI 7-Layer Security Lens
 | Layer | Threat Surface | Defensive Primitives | Tools/Logs |
 |---|---|---|---|
 | 7 – Application | Malicious payloads, credential stuffing, API abuse | WAF, secure coding, SAST/DAST, MFA | HTTP logs, SIEM alerts |
@@ -11,55 +22,91 @@
 | 2 – Data Link | ARP spoofing, MAC flooding | Dynamic ARP Inspection, port security | switch CAM tables, ARP logs |
 | 1 – Physical | Rogue AP, taps, EMI | Locked cabinets, 802.1X on switch ports | badge logs, RF spectrum analyzer |
 
-#### Private vs. Public IPv4
-- **RFC 1918 ranges** are unreachable from the Internet → NAT hides internal topology.  
-- **Ingress/Egress monitoring**: log every connection that leaves or enters the NAT gateway.
+---
 
-#### Core Protocols – Security Notes
-| Protocol | Port(s) | Security Facts | One-Liner |
+## 3. TCP vs UDP
+| Protocol | Characteristic | Use-Case | Security Note |
 |---|---|---|---|
-| **ICMP** | — | Recon (ping sweep, TTL fingerprint), DoS (ping flood) | Block inbound echo but allow Time-Exceeded for PMTU. |
-| **DNS** | 53/UDP+TCP | Cache poisoning, tunneling, recon (sub-domain brute) | DNSSEC + DoH/DoT, sink-hole malicious domains. |
-| **HTTP** | 80 | Plain-text credentials, session cookies | Redirect 80→443, HSTS preload. |
-| **HTTPS** | 443 | TLS inspection bypass, weak ciphers | Qualys SSL Labs audit, disable TLS <1.2, rotate certs. |
-| **FTP** | 21 (+ 20 data) | Credentials & payload in clear text | Replace with SFTP/FTPS. |
-| **SSH** | 22 | Brute-force, key misuse, tunneling | Key-only auth, fail2ban, `AllowUsers`, change port ≠ security. |
-| **SMTP/SMTPS** | 25, 587/465 | Spoofing, phishing, open relay | SPF+DKIM+DMARC, STARTTLS enforcement. |
-| **POP3/IMAP** | 110/143 vs 995/993 | Passwords in clear on legacy ports | Disable plaintext ports; enforce SSL/TLS. |
-| **TELNET** | 23 | **Never use** – no encryption | Drop at firewall. |
-| **DHCP** | 67/68 | Rogue DHCP server, IP exhaustion | DHCP snooping on switches, static leases for servers. |
+| **TCP** | Connection-oriented, reliable, 3-way handshake | HTTP(S), SSH, SMTP | SYN flood → SYN cookies, idle-timeout |
+| **UDP** | Connectionless, fast, no flow control | DNS, VoIP, DHCP | UDP flood → rate-limit, stateless ACL |
 
-#### Network Monitoring & Response
-- **Port Scan Detection**: sudden SYN packets → trigger “port scan” alert in SIEM.  
-- **ARP Watch**: compare CAM ↔ ARP tables; alert on mismatch.  
-- **BGP Hijack**: use BGPmon or RIPE RPKI validator for route-origin validation.  
-- **Packet Capture**: capture on span/tap port, filter with BPF:  
-  `tcpdump -i eth0 'tcp[tcpflags] & (tcp-syn) != 0 and dst port 3389'`
+---
 
-#### NAT & Firewall Cheat-Sheet
-- **DNAT (Port-Forward)**: maps public:port → private:port.  
-- **SNAT (Masquerade)**: hides private source behind public IP.  
-- **Firewall Zones**:  
-  - **Green** (internal), **Orange** (DMZ), **Red** (Internet).  
-  - Default deny inbound, allow related/established.
+## 4. Ports
+| Port | Service | Security Tip |
+|---|---|---|
+| 21/20 | FTP | Replace with SFTP/FTPS |
+| 22 | SSH | Key-only, fail2ban |
+| 53 | DNS | DNSSEC + DoH/DoT |
+| 80 | HTTP | Redirect to 443 + HSTS |
+| 443 | HTTPS | TLS 1.2+, disable weak ciphers |
+| 3389 | RDP | Restrict by IP, VPN only |
+| 445 | SMB | Block from Internet |
 
-#### Incident Response One-Liners
+---
 
-# Find live hosts on /24
-`nmap -sn 192.168.1.0/24 | grep "Nmap scan report"`
+## 5. Network Topologies & LAN Segmentation
+- **Star** – Central switch; single point of failure but easy to manage.  
+- **Bus** – Cheap; collisions & single break kills the segment.  
+- **Ring** – Token-based; cable cut = entire ring down.
 
-# Quick banner grab
+**Subnetting**  
+- Network: `192.168.1.0/24`  
+- Gateway: `.1` or `.254`  
+- Hosts: `.1-254` (minus network & broadcast).  
+- **VLANs** isolate departments; use **ACLs** between VLANs.
+
+---
+
+## 6. Routing & Path Selection
+- **OSPF** – Link-state; fast convergence; large networks.  
+- **RIP** – Distance-vector; hop-count ≤ 15; small/simple.  
+- **uRPF** prevents IP spoofing.  
+- **BGP RPKI** validates route origins.
+
+---
+
+## 7. Monitoring & Incident Response
+
+### Live host sweep
+`nmap -sn 192.168.1.0/24`
+
+### Banner grab
 `nc -nv 10.0.0.10 80`
 
-# DNS tunnel check
+### DNS tunnel check
 `dig +short tunnel.evil.com`
 
-# Check for rogue DHCP
+### Port scan detection
+`tcpdump -i eth0 'tcp[tcpflags] & (tcp-syn) != 0'`
+
+### Rogue DHCP
 `dhcpdump -i eth0`
 
-# Trace path with path-MTU discovery
-`traceroute -F 1500 8.8.8.8`
 
+---
 
-#### Key Take-Away
-Secure networks **never trust traffic by default**: encrypt in transit, authenticate endpoints, log everything, and inspect at every layer.
+## 8. NAT & Firewall Zones
+- **DNAT** = Port-forward external → internal.  
+- **SNAT** = Masquerade outbound traffic.  
+- **Zones**: Green (internal), Orange (DMZ), Red (Internet).  
+  – Default **deny-inbound**, allow **related/established**.
+
+---
+
+## 9. Secure Network Mindset
+- Encrypt **in transit** (TLS 1.2+).  
+- Authenticate **endpoints** (802.1X, certs).  
+- Log **everything** (NetFlow, syslog).  
+- Inspect **every layer** (WAF, IDS, endpoint AV).
+
+---
+
+## 10. End-to-End Web Request Flow
+1. Browser → DNS lookup → WAF → Load Balancer  
+2. Load Balancer → Web Server (static or dynamic)  
+3. Web App → Database → Rendered HTML → Client  
+
+**Security Stack**: CDN → WAF → LB → App → DB → Logging.
+
+---
