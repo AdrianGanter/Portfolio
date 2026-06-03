@@ -23,12 +23,12 @@ Aspiring SOC Analyst with interests in:
 - CCTV surveillance, alarm monitoring, incident escalation, and emergency dispatch operations
 - Development of operational tools, process improvements, and support for 24/7 control room operations
 
-**Grym Project**
+**Project: Grym**
 - Interactive Streaming Environment
 - Unreal Engine 5 Development
 - Live Production Systems
 
-**Bit Crusher**
+**Project: Bit Crusher**
 - Project Development
 - Operations
 - Business Management
