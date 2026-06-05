@@ -250,6 +250,8 @@ The vulnerability assessment team had previously informed the SOC that scanning 
 
 **Flag:** `THM{000_INTRO_TO_SOC}`
 
+<img width="1917" height="1035" alt="image" src="https://github.com/user-attachments/assets/aa6138c8-7241-47ed-91a5-0b6d7c04ab7d" />
+
 ---
 
 # Key Takeaways
@@ -261,7 +263,4 @@ The vulnerability assessment team had previously informed the SOC that scanning 
 - The 5 Ws framework provides a structured approach to investigations.
 - SIEM, EDR, and Firewalls are foundational technologies within a SOC environment.
 - Proper analysis is required to distinguish legitimate activity from malicious behavior before escalating incidents.
-
-
-<img width="1917" height="1035" alt="image" src="https://github.com/user-attachments/assets/aa6138c8-7241-47ed-91a5-0b6d7c04ab7d" />
 
