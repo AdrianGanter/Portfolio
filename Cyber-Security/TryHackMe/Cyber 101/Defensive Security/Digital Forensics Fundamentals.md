@@ -151,8 +151,6 @@ GPS coordinates obtained. Placed in Google Maps to identify exact location.
 | Street Location | Milk Street |
 | Camera Model | Canon EOS R6 |
 
-<img width="1905" height="1035" alt="image" src="https://github.com/user-attachments/assets/0a43212a-e431-49e4-bd58-7ca89fae7725" />
-
 ---
 
 # Key Takeaways
