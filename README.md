@@ -2,7 +2,7 @@
 
 ## About Me
 
-Current Security & Emergency Operations Center (SEOC) Operator supporting critical infrastructure. 
+Currently working in BHP's Security & Emergency Operations Center (SEOC) Operator supporting critical infrastructure. 
 
 Aspiring SOC Analyst with interests in:
 - Threat Detection
