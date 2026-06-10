@@ -48,6 +48,9 @@ I developed a **centralised dashboard interface** that consolidates tools, resou
   - **Emergency Log**
 - Supports faster navigation to critical reporting tools  
 
+<img width="305" height="209" alt="image" src="https://github.com/user-attachments/assets/b822f086-9e5f-443a-a799-e948f5b52ee4" />
+
+
 ---
 
 ### 🛠 Tools & Applications
@@ -109,6 +112,9 @@ This feature supports:
 - Faster information capture  
 - Improved clarity during incident handling  
 - Reduced risk of lost or incomplete information  
+
+<img width="701" height="863" alt="image" src="https://github.com/user-attachments/assets/dcb1988e-4b26-42cc-9621-931c749e3e2a" />
+
 
 ---
 
