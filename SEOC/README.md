@@ -1,7 +1,7 @@
 # Security & Emergency Operations Center (SEOC) – BHP WAIO
 
 ## Overview
-This workflow outlines my operational experience working within a **Security and Emergency Operations Center (SEOC)** supporting BHP Western Australia Iron Ore (WAIO).  
+This README outlines my operational experience working within a **Security and Emergency Operations Center (SEOC)** supporting BHP Western Australia Iron Ore (WAIO).  
 
 SEOC functions as a **24/7 centralised command and control environment**, responsible for monitoring, incident response coordination, and real-time intelligence across **9 operational sites and 9 residential villages**.
 
