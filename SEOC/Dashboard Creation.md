@@ -113,7 +113,7 @@ This feature supports:
 - Improved clarity during incident handling  
 - Reduced risk of lost or incomplete information  
 
-<img width="701" height="863" alt="image" src="https://github.com/user-attachments/assets/dcb1988e-4b26-42cc-9621-931c749e3e2a" />
+<img width="660" height="848" alt="image" src="https://github.com/user-attachments/assets/b005e643-1055-431e-9da5-8596610cb797" />
 
 
 ---
