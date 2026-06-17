@@ -2,9 +2,9 @@
 
 ---
 
-# Humans as Attack Vectors
+## Humans as Attack Vectors
 
-## Core Idea
+### Core Idea
 Humans are often the weakest link in cyber security because they can be manipulated into giving access, running malware, or revealing sensitive information.
 
 Attackers usually prefer targeting people over technical systems because it is faster and requires less effort.
