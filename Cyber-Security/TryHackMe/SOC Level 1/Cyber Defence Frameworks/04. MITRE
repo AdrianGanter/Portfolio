@@ -1,0 +1,225 @@
+# MITRE Frameworks & Threat-Informed Defense – Learning Summary
+
+## Overview
+
+In this room, I explored MITRE's major cybersecurity frameworks and resources, focusing on how security teams use them to understand attacker behaviour, improve detections, strengthen defenses, and communicate threats using a common language.
+
+The primary framework covered was MITRE ATT&CK, along with supporting resources such as CAR (Cyber Analytics Repository), D3FEND, Caldera, AADAPT, and ATLAS.
+
+---
+
+## MITRE ATT&CK Framework
+
+MITRE ATT&CK (Adversarial Tactics, Techniques & Common Knowledge) is a globally accessible knowledge base of real-world adversary behaviour.
+
+The framework documents:
+
+- **Tactics** – The attacker's objective ("Why")
+- **Techniques** – How the objective is achieved ("How")
+- **Procedures** – The specific implementation of a technique
+
+ATT&CK provides a standardized way for security teams to describe, investigate, detect, and respond to cyber attacks.
+
+### ATT&CK Matrix
+
+The ATT&CK Matrix visually organizes attacker behaviour into tactics and techniques.
+
+Examples include:
+
+- Reconnaissance
+- Initial Access
+- Execution
+- Persistence
+- Privilege Escalation
+- Defense Evasion
+- Credential Access
+- Discovery
+- Lateral Movement
+- Collection
+- Exfiltration
+- Impact
+
+Each tactic contains multiple techniques and sub-techniques that describe how adversaries operate throughout an attack lifecycle.
+
+---
+
+## Threat Intelligence & ATT&CK
+
+One of ATT&CK's most valuable uses is mapping Cyber Threat Intelligence (CTI) to known adversary behaviours.
+
+This allows organizations to:
+
+- Profile threat actors
+- Understand common attack patterns
+- Identify defensive gaps
+- Build detections around known TTPs
+- Improve incident investigations
+
+By mapping activity to ATT&CK techniques, security teams can convert threat intelligence into actionable detection logic, SIEM rules, playbooks, and response procedures.
+
+---
+
+## ATT&CK Use Cases Across Security Teams
+
+### Threat Intelligence Teams
+- Track adversary behaviour
+- Build threat actor profiles
+- Share intelligence using standardized ATT&CK terminology
+
+### SOC Analysts
+- Investigate alerts
+- Add context to incidents
+- Understand attacker objectives
+
+### Detection Engineers
+- Map detections to ATT&CK techniques
+- Measure defensive coverage
+- Identify monitoring gaps
+
+### Incident Responders
+- Reconstruct attack timelines
+- Track attacker movement through environments
+- Improve future response processes
+
+### Red & Purple Teams
+- Emulate real-world attackers
+- Test defensive capabilities
+- Validate security controls
+
+---
+
+## Threat Actor Analysis
+
+I learned how ATT&CK can be used to analyze real threat groups by reviewing their:
+
+- Tactics
+- Techniques
+- Software used
+- Campaign history
+- Procedures
+
+This enables defenders to understand how specific adversaries operate and build detections tailored to known threats.
+
+Threat actor profiling helps organizations move from reactive defense to proactive threat hunting.
+
+---
+
+## Cyber Analytics Repository (CAR)
+
+MITRE CAR (Cyber Analytics Repository) is a collection of detection analytics built around ATT&CK techniques.
+
+CAR helps defenders translate ATT&CK intelligence into practical detections by providing:
+
+- Detection logic
+- Pseudocode
+- SIEM query examples
+- Detection rationale
+- Validation guidance
+
+Key takeaway:
+
+ATT&CK explains **how attackers operate**, while CAR helps defenders understand **how to detect those activities**.
+
+---
+
+## MITRE D3FEND
+
+MITRE D3FEND is a defensive framework that maps security controls and defensive techniques to adversary behaviour.
+
+While ATT&CK focuses on attacker actions, D3FEND focuses on defensive countermeasures.
+
+The framework is organized into defensive tactics such as:
+
+- Harden
+- Detect
+- Isolate
+- Deceive
+- Evict
+- Restore
+
+D3FEND helps defenders understand:
+
+- How specific controls work
+- Which attacks they mitigate
+- How defensive techniques relate to ATT&CK techniques
+
+Example defensive concepts include:
+
+- Credential Rotation
+- User Behaviour Analytics
+- Log Monitoring
+- Network Isolation
+
+---
+
+## MITRE Caldera
+
+MITRE Caldera is an automated adversary emulation platform.
+
+It allows organizations to:
+
+- Simulate real-world attacks
+- Test detections
+- Validate security controls
+- Practice incident response
+- Perform red and purple team exercises
+
+Caldera uses ATT&CK techniques to replicate attacker behaviour in controlled environments.
+
+---
+
+## Adversary Emulation Plans
+
+MITRE provides detailed adversary emulation plans that replicate known threat actor behaviour.
+
+These plans help organizations:
+
+- Test defenses realistically
+- Measure detection coverage
+- Improve threat-informed defense programs
+- Validate security controls against real-world attack techniques
+
+---
+
+## Emerging MITRE Frameworks
+
+### AADAPT
+
+AADAPT focuses on threats targeting digital asset ecosystems, including:
+
+- Blockchain technologies
+- Cryptocurrency platforms
+- Digital wallets
+- Smart contracts
+
+The framework maps attacker tactics and techniques specific to digital asset environments.
+
+### ATLAS
+
+ATLAS focuses on threats targeting Artificial Intelligence and Machine Learning systems.
+
+It documents:
+
+- AI-specific attack techniques
+- Adversarial machine learning threats
+- AI security weaknesses
+- Defensive mitigations
+
+As AI adoption grows, frameworks like ATLAS help defenders understand emerging risks.
+
+---
+
+## Key Takeaways
+
+- MITRE ATT&CK provides a standardized framework for understanding attacker behaviour.
+- Tactics represent attacker goals, while techniques describe how those goals are achieved.
+- ATT&CK helps threat intelligence, SOC, detection engineering, incident response, and red team functions work from a common language.
+- CAR translates ATT&CK techniques into practical detection analytics.
+- D3FEND maps defensive controls to attacker behaviours.
+- Caldera enables realistic adversary emulation and defensive testing.
+- Threat actor profiling using ATT&CK helps organizations build more effective detections and threat hunting programs.
+- Emerging frameworks such as AADAPT and ATLAS extend MITRE's coverage into digital assets, blockchain technologies, and AI security.
+
+## SOC Analyst Perspective
+
+Understanding MITRE ATT&CK provides a structured way to analyze alerts, investigate incidents, map attacker behaviour, identify defensive gaps, and communicate findings consistently across security teams. ATT&CK serves as one of the most important frameworks used in modern SOC operations, threat hunting, detection engineering, and incident response.
