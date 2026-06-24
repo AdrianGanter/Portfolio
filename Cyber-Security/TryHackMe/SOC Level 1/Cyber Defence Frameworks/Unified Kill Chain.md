@@ -1,0 +1,89 @@
+<img width="1230" height="794" alt="image" src="https://github.com/user-attachments/assets/4839798b-0a59-4812-8f24-3d5f04551817" />
+
+# TryHackMe - Unified Kill Chain
+
+## Overview
+The Unified Kill Chain (UKC), developed by Paul Pols in 2017, is a cybersecurity framework used to understand and analyse the full lifecycle of a cyber attack. It complements frameworks such as MITRE ATT&CK and provides a detailed view of attacker behaviour across 18 attack phases.
+
+The framework helps defenders identify attacker objectives, understand attack progression, improve threat modelling, and strengthen an organisation's overall security posture.
+
+---
+
+## Key Concepts Learned
+
+### Kill Chain
+A kill chain describes the stages an attacker follows to compromise a target. Understanding these stages allows defenders to implement controls that can prevent, detect, or disrupt attacks.
+
+### Threat Modelling
+Threat modelling is the process of:
+
+- Identifying critical systems and assets
+- Assessing vulnerabilities and weaknesses
+- Creating mitigation strategies
+- Implementing security policies and controls
+
+The UKC supports threat modelling by highlighting potential attack paths and attack surfaces.
+
+---
+
+## Unified Kill Chain Phases
+
+### Goal: In (Initial Foothold)
+
+The attacker attempts to gain initial access to a target environment.
+
+Key phases include:
+
+- **Reconnaissance** – Gathering information about systems, services, users, and network structure.
+- **Weaponization** – Preparing attack infrastructure such as payloads and command-and-control (C2) servers.
+- **Social Engineering** – Manipulating users through phishing, impersonation, or deception.
+- **Exploitation** – Taking advantage of vulnerabilities to execute code or gain access.
+- **Persistence** – Establishing mechanisms to maintain access.
+- **Defense Evasion** – Avoiding detection by security controls.
+- **Command & Control (C2)** – Creating communication channels with compromised systems.
+- **Pivoting** – Using one compromised system to access additional systems.
+
+---
+
+### Goal: Through (Network Propagation)
+
+The attacker expands access throughout the environment.
+
+Key phases include:
+
+- **Discovery** – Enumerating users, systems, applications, and network resources.
+- **Privilege Escalation** – Obtaining higher levels of access such as administrator or root privileges.
+- **Execution** – Running malicious code or deploying malware.
+- **Credential Access** – Stealing passwords, hashes, or authentication tokens.
+- **Lateral Movement** – Moving between systems using stolen credentials and elevated privileges.
+
+---
+
+### Goal: Out (Action on Objectives)
+
+The attacker achieves their intended objective.
+
+Key phases include:
+
+- **Collection** – Gathering sensitive information and valuable data.
+- **Exfiltration** – Transferring stolen data outside the organisation.
+- **Impact** – Disrupting operations through ransomware, data destruction, defacement, or denial-of-service attacks.
+- **Objectives** – Achieving the final goal, such as financial gain, espionage, or reputational damage.
+
+---
+
+## SOC Analyst Relevance
+
+The Unified Kill Chain helps SOC analysts:
+
+- Map alerts to attacker activities.
+- Understand how an attack progresses through an environment.
+- Identify opportunities for detection and response.
+- Improve threat hunting and incident investigations.
+- Strengthen defensive controls based on observed attacker behaviour.
+
+---
+
+## Key Takeaway
+
+The Unified Kill Chain provides a comprehensive view of modern cyber attacks from initial reconnaissance through to attacker objectives. By understanding each phase, defenders can better detect, investigate, and mitigate threats while improving an organisation's overall cybersecurity posture.
