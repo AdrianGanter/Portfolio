@@ -29,7 +29,13 @@ Aspiring SOC Analyst with interests in:
 - [Windows Fundamentals](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/TryHackMe/Cyber%20101/Windows%20Fundamentals.md)
   
 
-[SOC Level 1](https://github.com/AdrianGanter/Portfolio/tree/40817b97476dbc28cc81085b8e494c74809a7fff/Cyber-Security/TryHackMe/SOC%20Level%201)
+## [SOC Level 1](https://github.com/AdrianGanter/Portfolio/tree/40817b97476dbc28cc81085b8e494c74809a7fff/Cyber-Security/TryHackMe/SOC%20Level%201)
+- [Blue Team Introduction](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/Blue%20Team%20Introduction)
+- [Core SOC Solutions](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/Core%20SOC%20Solutions)
+- [Cyber Defence Frameworks](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/Cyber%20Defence%20Frameworks)
+- [Network Traffic Analysis](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/Network%20Traffic%20Analysis)
+- [Phishing Analysis](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/Phishing%20Analysis)
+- [SOC Team Internals](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/SOC%20Team%20Internals)
 
 ### Labs and Practicals
 - 
