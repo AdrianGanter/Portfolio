@@ -18,7 +18,7 @@ Aspiring SOC Analyst with interests in:
 
 ### TryHackMe Studies
 
-[Cyber 101](https://github.com/AdrianGanter/Portfolio/tree/40817b97476dbc28cc81085b8e494c74809a7fff/Cyber-Security/TryHackMe/Cyber%20101))
+[Cyber 101](https://github.com/AdrianGanter/Portfolio/tree/40817b97476dbc28cc81085b8e494c74809a7fff/Cyber-Security/TryHackMe/Cyber%20101)
 
 [SOC Level 1](https://github.com/AdrianGanter/Portfolio/tree/40817b97476dbc28cc81085b8e494c74809a7fff/Cyber-Security/TryHackMe/SOC%20Level%201)
 
