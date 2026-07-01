@@ -42,8 +42,9 @@ Aspiring SOC Analyst with interests in:
 
 
 
-## 🧪[Labs & Practicals](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals)
-### [Phishing](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals/Phishing)
+# 🧪[Labs & Practicals](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals)
+
+## [Phishing](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals/Phishing)
 - [The Greenholt Phish](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/Labs%20%26%20Practicals/Phishing/01.%20The%20Greenholt%20Phish.md)
 - [Phishing Kit Investigation](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/Labs%20%26%20Practicals/Phishing/02.%20Phishing%20Kit%20Investigation.md)
 
