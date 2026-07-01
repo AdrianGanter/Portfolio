@@ -38,7 +38,7 @@ Aspiring SOC Analyst with interests in:
 - [SOC Team Internals](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/SOC%20Team%20Internals)
 
   
-
+---
 
 
 
@@ -46,7 +46,8 @@ Aspiring SOC Analyst with interests in:
 ### [Phishing](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals/Phishing)
 - [The Greenholt Phish](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/Labs%20%26%20Practicals/Phishing/01.%20The%20Greenholt%20Phish.md)
 - [Phishing Kit Investigation](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/Labs%20%26%20Practicals/Phishing/02.%20Phishing%20Kit%20Investigation.md)
-  
+
+---
 
 **Security & Emergency Operations Centre (SEOC)**
 - Real-time monitoring and coordination of security and emergency incidents
