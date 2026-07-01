@@ -14,9 +14,14 @@ Aspiring SOC Analyst with interests in:
 
 # Portfolio Sections
 
-**Cyber Security**
-- TryHackMe Learning
-- Labs and Writeups
+## Cyber Security
+
+### TryHackMe Learning
+- Cyber 101
+- SOC Level 1
+
+### Labs and Practicals
+- 
 
 **Security & Emergency Operations Centre (SEOC)**
 - Real-time monitoring and coordination of security and emergency incidents
