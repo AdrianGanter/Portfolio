@@ -1,0 +1,116 @@
+# Malware Analysis: Researching
+
+## Understanding
+
+This room focused on using **file hashes (checksums)** to identify files, verify integrity and quickly research potential malware using online analysis services.
+
+---
+
+## Checksums (Hashes)
+
+A checksum (or **hash**) is a fixed-length value generated from a file using a hashing algorithm.
+
+Key points:
+
+- Same file + same algorithm = same hash
+- Any change to a file produces a completely different hash
+- Hash length stays the same regardless of file size
+- Used to verify file integrity and uniquely identify malware samples
+
+Common algorithms:
+
+- MD5
+- SHA1
+- SHA256
+- SHA512
+
+> In malware analysis, SHA256 is commonly used to identify and search for samples.
+
+---
+
+## Hash Collisions
+
+I learnt that although extremely rare, two different files can theoretically produce the same hash. This is known as a **hash collision**.
+
+Modern algorithms such as SHA256 greatly reduce this risk compared to older algorithms like MD5.
+
+---
+
+## Online Sandboxing
+
+Online sandboxes execute suspicious files inside isolated virtual environments and automatically generate analysis reports.
+
+They can reveal behaviours such as:
+
+- DNS requests
+- Network connections
+- Created processes
+- Registry modifications
+- File activity
+- Persistence mechanisms
+
+These services provide a fast initial assessment before performing manual malware analysis.
+
+Common services:
+
+- Any.Run
+- Hybrid Analysis
+
+---
+
+## VirusTotal
+
+VirusTotal uses file hashes to locate existing malware reports.
+
+I learnt that VirusTotal can:
+
+- Search by file hash
+- Search by IP address
+- Upload files for analysis
+- Aggregate results from dozens of antivirus engines
+- View file metadata and community reports
+
+This makes it one of the first resources to check when investigating suspicious files.
+
+---
+
+## Practical Skills
+
+I practised:
+
+- Generating file hashes using **HashTab**
+- Generating hashes in PowerShell with **Get-FileHash**
+- Using **CertUtil** to calculate hashes
+- Looking up malware samples using their SHA256 hash
+- Reading Hybrid Analysis reports
+- Investigating VirusTotal reports to identify file details and malware indicators
+
+---
+
+## Useful Commands
+
+PowerShell:
+
+- `Get-FileHash <file> -Algorithm SHA256`
+
+CertUtil:
+
+- `CertUtil -hashfile <file> SHA256`
+
+Supported algorithms include:
+
+- MD5
+- SHA1
+- SHA256
+- SHA512
+
+---
+
+## Key Takeaways
+
+- Hashes uniquely identify files and verify integrity.
+- Even a one-byte change produces a completely different hash.
+- SHA256 is the preferred hash for malware research.
+- Online sandboxes provide quick behavioural analysis in isolated environments.
+- VirusTotal is an invaluable resource for researching suspicious files using hashes and aggregated AV detections.
+- Generating and searching file hashes is often the first step in a malware investigation.
