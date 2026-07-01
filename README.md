@@ -12,13 +12,22 @@ Aspiring SOC Analyst with interests in:
   
 ---
 
-# Portfolio Sections
+# Cyber Security Studies
 
-## Cyber Security
-
-### TryHackMe Studies
-
-[Cyber 101](https://github.com/AdrianGanter/Portfolio/tree/40817b97476dbc28cc81085b8e494c74809a7fff/Cyber-Security/TryHackMe/Cyber%20101)
+## [Cyber 101](https://github.com/AdrianGanter/Portfolio/tree/40817b97476dbc28cc81085b8e494c74809a7fff/Cyber-Security/TryHackMe/Cyber%20101)
+- [Cryptography](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/Cyber%20101/Cryptography)
+- [Defensive Security](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/Cyber%20101/Defensive%20Security)
+- [Metasploit](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/Cyber%20101/Metasploit)
+- [Networking](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/Cyber%20101/Networking)
+- [OWASP Top 10](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/Cyber%20101/OWASP%20Top%2010%20(2025))
+- [Offensive Security Tooling](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/Cyber%20101/Offensive%20Security%20Tooling)
+- [Active Directory Basics](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/TryHackMe/Cyber%20101/Active%20Directory%20Basics.md)
+- [Command Line & Powershell](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/TryHackMe/Cyber%20101/Command%20Line%20%26%20Powershell.md)
+- [Linux Fundamentals](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/TryHackMe/Cyber%20101/Linux%20Fundamentals.md)
+- [Search Skills](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/TryHackMe/Cyber%20101/Search%20Skills.md)
+- [Security Principles](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/TryHackMe/Cyber%20101/Security%20Principles.md)
+- [Windows Fundamentals](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/TryHackMe/Cyber%20101/Windows%20Fundamentals.md)
+  
 
 [SOC Level 1](https://github.com/AdrianGanter/Portfolio/tree/40817b97476dbc28cc81085b8e494c74809a7fff/Cyber-Security/TryHackMe/SOC%20Level%201)
 
