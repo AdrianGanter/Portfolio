@@ -36,11 +36,8 @@ Aspiring SOC Analyst with interests in:
 - [Network Traffic Analysis](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/Network%20Traffic%20Analysis)
 - [Phishing Analysis](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/Phishing%20Analysis)
 - [SOC Team Internals](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/SOC%20Team%20Internals)
-
   
 ---
-
-
 
 ## 🧪[Labs & Practicals](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals)
 ### [Phishing](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals/Phishing)
@@ -49,10 +46,14 @@ Aspiring SOC Analyst with interests in:
 
 ---
 
-**Security & Emergency Operations Centre (SEOC)**
+# 🛡️[BHP's Security & Emergency Operations Centre (SEOC)](https://github.com/AdrianGanter/Portfolio/tree/97479c8b858fa67841e758edd9d83128c41ef977/SEOC)
 - Real-time monitoring and coordination of security and emergency incidents
 - CCTV surveillance, alarm monitoring, incident escalation, and emergency dispatch operations
 - Development of operational tools, process improvements, and support for 24/7 control room operations
+
+Project:  [SEOC Dashboard](https://github.com/AdrianGanter/Portfolio/blob/97479c8b858fa67841e758edd9d83128c41ef977/SEOC/Dashboard%20Creation.md)
+
+---
 
 **Project: Grym**
 - Interactive Streaming Environment
