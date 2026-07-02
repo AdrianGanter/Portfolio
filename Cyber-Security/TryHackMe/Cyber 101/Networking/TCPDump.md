@@ -7,7 +7,9 @@ tcpdump is a command-line packet analysis tool used to capture and inspect netwo
 Basic Capture
 -------------
 sudo tcpdump -i any
+
 sudo tcpdump -i eth0
+
 ip a s / ip address show   -> view interfaces
 
 Capturing Packets to File
