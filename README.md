@@ -47,8 +47,8 @@ Aspiring SOC Analyst with interests in:
 ---
 
 # 🛡️[BHP's Security & Emergency Operations Centre (SEOC)](https://github.com/AdrianGanter/Portfolio/tree/97479c8b858fa67841e758edd9d83128c41ef977/SEOC)
-- Real-time monitoring and coordination of security and emergency incidents
-- CCTV surveillance, alarm monitoring, incident escalation, and emergency dispatch operations
+- Real-time monitoring and coordination of security and emergency incidents accross 9 villages and 9 mine sites
+- CCTV surveillance, alarm monitoring, incident escalation, and emergency dispatch
 - Development of operational tools, process improvements, and support for 24/7 control room operations
 
 Project:  [SEOC Dashboard](https://github.com/AdrianGanter/Portfolio/blob/97479c8b858fa67841e758edd9d83128c41ef977/SEOC/Dashboard%20Creation.md)
