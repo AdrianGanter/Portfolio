@@ -107,19 +107,4 @@ My role required operating in a **high-pressure, multi-system environment**, man
 - Enhanced **safety and wellbeing** of personnel and residents across 9 villages  
 - Strengthened **operational coordination and communication** across WAIO  
 
----
-
-## Why This Matters for Cybersecurity
-
-This experience directly translates to cybersecurity operations, particularly in:
-
-- Security Operations Center (**SOC**) environments  
-- Incident detection and response workflows  
-- Threat monitoring and escalation  
-- Log analysis and investigative processes  
-- High-pressure decision-making environments  
-
-SEOC represents a **physical security equivalent of a SOC**, requiring the same discipline, awareness, and analytical thinking used in cyber defence.
-
----
 
