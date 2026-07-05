@@ -36,7 +36,8 @@ Aspiring SOC Analyst with interests in:
 - [Network Traffic Analysis](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/Network%20Traffic%20Analysis)
 - [Phishing Analysis](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/Phishing%20Analysis)
 - [SOC Team Internals](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/SOC%20Team%20Internals)
-  
+- [Network Security Monitoring](https://github.com/AdrianGanter/Portfolio/tree/cafef553be3f1c164238e60ad3b7dd02cd4c2677/Cyber-Security/TryHackMe/SOC%20Level%201/Network%20Security%20Monitoring)
+
 ---
 
 ## 🧪[Labs & Practicals](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals)
