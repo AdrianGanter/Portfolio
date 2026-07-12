@@ -14,7 +14,7 @@ Aspiring SOC Analyst with interests in:
 
 # Cyber Security Studies
 
-## 🔒[Cyber 101](https://github.com/AdrianGanter/Portfolio/tree/40817b97476dbc28cc81085b8e494c74809a7fff/Cyber-Security/TryHackMe/Cyber%20101)
+## 🔒 [Cyber 101](https://github.com/AdrianGanter/Portfolio/tree/40817b97476dbc28cc81085b8e494c74809a7fff/Cyber-Security/TryHackMe/Cyber%20101)
 - [Cryptography](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/Cyber%20101/Cryptography)
 - [Defensive Security](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/Cyber%20101/Defensive%20Security)
 - [Metasploit](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/Cyber%20101/Metasploit)
@@ -29,7 +29,7 @@ Aspiring SOC Analyst with interests in:
 - [Windows Fundamentals](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/TryHackMe/Cyber%20101/Windows%20Fundamentals.md)
   
 
-## 🖥️[SOC Level 1](https://github.com/AdrianGanter/Portfolio/tree/40817b97476dbc28cc81085b8e494c74809a7fff/Cyber-Security/TryHackMe/SOC%20Level%201)
+## 🖥️ [SOC Level 1](https://github.com/AdrianGanter/Portfolio/tree/40817b97476dbc28cc81085b8e494c74809a7fff/Cyber-Security/TryHackMe/SOC%20Level%201)
 - [Blue Team Introduction](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/Blue%20Team%20Introduction)
 - [Core SOC Solutions](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/Core%20SOC%20Solutions)
 - [Cyber Defence Frameworks](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/TryHackMe/SOC%20Level%201/Cyber%20Defence%20Frameworks)
@@ -43,14 +43,14 @@ Aspiring SOC Analyst with interests in:
 
 ---
 
-## 🧪[Labs & Practicals](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals)
+## 🧪 [Labs & Practicals](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals)
 ### [Phishing](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals/Phishing)
 - [The Greenholt Phish](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/Labs%20%26%20Practicals/Phishing/01.%20The%20Greenholt%20Phish.md)
 - [Phishing Kit Investigation](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/Labs%20%26%20Practicals/Phishing/02.%20Phishing%20Kit%20Investigation.md)
 
 ---
 
-# 🛡️[BHP's Security & Emergency Operations Centre (SEOC)](https://github.com/AdrianGanter/Portfolio/tree/97479c8b858fa67841e758edd9d83128c41ef977/SEOC)
+# 🛡️ [BHP's Security & Emergency Operations Centre (SEOC)](https://github.com/AdrianGanter/Portfolio/tree/97479c8b858fa67841e758edd9d83128c41ef977/SEOC)
 - Real-time monitoring and coordination of security and emergency incidents accross 9 villages and 9 mine sites
 - CCTV surveillance, alarm monitoring, incident escalation, and emergency dispatch
 - Development of operational tools, process improvements, and support for 24/7 control room operations
