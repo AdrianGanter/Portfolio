@@ -39,7 +39,7 @@ Aspiring SOC Analyst with interests in:
 - [Network Security Monitoring](https://github.com/AdrianGanter/Portfolio/tree/cafef553be3f1c164238e60ad3b7dd02cd4c2677/Cyber-Security/TryHackMe/SOC%20Level%201/Network%20Security%20Monitoring)
 - [Web Security Monitoring](https://github.com/AdrianGanter/Portfolio/tree/a7e62965e557beb2064987b25b5e27a4c0258b1c/Cyber-Security/TryHackMe/SOC%20Level%201/Web%20Security%20Monitoring)
 - [Windows Security Monitoring](https://github.com/AdrianGanter/Portfolio/tree/4609ddf10a64e8fff05538cfa5f4c49bed78c777/Cyber-Security/TryHackMe/SOC%20Level%201/Windows%20Security%20Monitoring)
-
+- [Linux Security Monitoring](https://github.com/AdrianGanter/Portfolio/tree/94450bea390a9e75804455aaf9169b43b54a5ef7/Cyber-Security/TryHackMe/SOC%20Level%201/Linux%20Security%20Monitoring)
 
 ---
 
