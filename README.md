@@ -40,6 +40,7 @@ Aspiring SOC Analyst with interests in:
 - [Web Security Monitoring](https://github.com/AdrianGanter/Portfolio/tree/a7e62965e557beb2064987b25b5e27a4c0258b1c/Cyber-Security/TryHackMe/SOC%20Level%201/Web%20Security%20Monitoring)
 - [Windows Security Monitoring](https://github.com/AdrianGanter/Portfolio/tree/4609ddf10a64e8fff05538cfa5f4c49bed78c777/Cyber-Security/TryHackMe/SOC%20Level%201/Windows%20Security%20Monitoring)
 - [Linux Security Monitoring](https://github.com/AdrianGanter/Portfolio/tree/94450bea390a9e75804455aaf9169b43b54a5ef7/Cyber-Security/TryHackMe/SOC%20Level%201/Linux%20Security%20Monitoring)
+- [Malware Concepts for SOC](https://github.com/AdrianGanter/Portfolio/tree/c3ca214ce8bfbd6fb6d1128b9022fe95bf72dc38/Cyber-Security/TryHackMe/SOC%20Level%201/Malware%20Concepts%20for%20SOC)
 
 ---
 
@@ -47,6 +48,9 @@ Aspiring SOC Analyst with interests in:
 ### [Phishing](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals/Phishing)
 - [The Greenholt Phish](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/Labs%20%26%20Practicals/Phishing/01.%20The%20Greenholt%20Phish.md)
 - [Phishing Kit Investigation](https://github.com/AdrianGanter/Portfolio/blob/main/Cyber-Security/Labs%20%26%20Practicals/Phishing/02.%20Phishing%20Kit%20Investigation.md)
+
+### [Malware Analysis](https://github.com/AdrianGanter/Portfolio/tree/14683e84141aaba4f397d5c8af908f5fb093f040/Cyber-Security/Labs%20%26%20Practicals/Malware%20Analysis)
+- [Shadow Trace](https://github.com/AdrianGanter/Portfolio/blob/14683e84141aaba4f397d5c8af908f5fb093f040/Cyber-Security/Labs%20%26%20Practicals/Malware%20Analysis/01%20Shadow%20Trace.md)
 
 ---
 
