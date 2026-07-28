@@ -52,6 +52,10 @@ Aspiring SOC Analyst with interests in:
 ### [Malware Analysis](https://github.com/AdrianGanter/Portfolio/tree/14683e84141aaba4f397d5c8af908f5fb093f040/Cyber-Security/Labs%20%26%20Practicals/Malware%20Analysis)
 - [Shadow Trace](https://github.com/AdrianGanter/Portfolio/blob/14683e84141aaba4f397d5c8af908f5fb093f040/Cyber-Security/Labs%20%26%20Practicals/Malware%20Analysis/01%20Shadow%20Trace.md)
 
+### [Threat Intel](https://github.com/AdrianGanter/Portfolio/tree/8acfb8eff6814adaa8b79f3ab1d991a14578fe52/Cyber-Security/Labs%20%26%20Practicals/Threat%20Intel)
+- [Invite Only](https://github.com/AdrianGanter/Portfolio/blob/8acfb8eff6814adaa8b79f3ab1d991a14578fe52/Cyber-Security/Labs%20%26%20Practicals/Threat%20Intel/01.%20Invite%20Only%20%E2%80%93%20Threat%20Intelligence%20Investigation.md)
+  
+
 ---
 
 # 🛡️ [BHP's Security & Emergency Operations Centre (SEOC)](https://github.com/AdrianGanter/Portfolio/tree/97479c8b858fa67841e758edd9d83128c41ef977/SEOC)
