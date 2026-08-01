@@ -54,7 +54,9 @@ Aspiring SOC Analyst with interests in:
 
 ### [Threat Intel](https://github.com/AdrianGanter/Portfolio/tree/8acfb8eff6814adaa8b79f3ab1d991a14578fe52/Cyber-Security/Labs%20%26%20Practicals/Threat%20Intel)
 - [Invite Only](https://github.com/AdrianGanter/Portfolio/blob/8acfb8eff6814adaa8b79f3ab1d991a14578fe52/Cyber-Security/Labs%20%26%20Practicals/Threat%20Intel/01.%20Invite%20Only%20%E2%80%93%20Threat%20Intelligence%20Investigation.md)
-  
+
+### [Log Analysis](https://github.com/AdrianGanter/Portfolio/tree/8f00dfe976a65ba2ef9db63dc96dfd7abe325455/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis)
+- [Basic Analysis with Splunk](https://github.com/AdrianGanter/Portfolio/blob/8f00dfe976a65ba2ef9db63dc96dfd7abe325455/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis/01.%20Basic%20Analysis%20with%20Splunk.md)
 
 ---
 
