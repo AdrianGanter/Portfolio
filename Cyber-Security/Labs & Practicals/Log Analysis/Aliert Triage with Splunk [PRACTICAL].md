@@ -1,0 +1,284 @@
+# Alert 1 - Linux Initial Access (Brute Force)
+
+## Scenario
+
+You’ve just started your first shift as a SOC analyst at an MSSP. Only a few minutes have passed since an alert about a possible brute force attack appeared on the platform.
+
+### Alert Details
+
+| Field | Value |
+|-------|-------|
+| **Alert Name** | Brute Force Activity Detection |
+| **Time** | 17/09/2025 9:00:21 AM |
+| **Target Host** | tryhackme-2404 |
+| **Source IP** | 10.10.242.248 |
+
+Your job is to investigate this activity and decide whether it should be considered suspicious. Unfortunately there is no asset inventory available for the target host.
+
+---
+
+## Investigation
+
+Firstly in Splunk I searched for any accepted, failed or invalid login attempts against the flagged IP address.
+
+```spl
+index="linux-alert" sourcetype="linux_secure" 10.10.242.248
+| search "Accepted password for" OR "Failed password for" OR "Invalid user"
+| sort + _time
+```
+
+<img width="1359" height="618" alt="image" src="https://github.com/user-attachments/assets/964b5bc9-ba95-4cf8-a50d-04dd12aa8510" />
+
+This revealed 543 events. A lot of invalid login attempts, but no initial signs of brute force. I must narrow the search down to number of login attempts for each user.
+
+```spl
+index="linux-alert" sourcetype="linux_secure" 10.10.242.248
+| rex field=_raw "^\d{4}-\d{2}-\d{2}T[^\s]+\s+(?<log_hostname>\S+)"
+| rex field=_raw "sshd\[\d+\]:\s*(?<action>Failed|Accepted)\s+\S+\s+for(?: invalid user)? (?<username>\S+) from (?<src_ip>\d{1,3}(?:\.\d{1,3}){3})"
+| eval process="sshd"
+| stats count values(src_ip) as src_ip values(log_hostname) as hostname values(process) as process by username
+```
+
+In the statistics tab this revealed the flagged IP address attempted logging in on 4 different users, with one user, john.smith having 503 login attempts. A clear indication of brute force activity.
+
+<img width="1366" height="654" alt="image" src="https://github.com/user-attachments/assets/f14e8067-911e-4193-b06e-1bff52c9c89b" />
+
+I know the brute force attempt targeted john.smith but I don't know if they were successful. So I simply altered the stats section of the search query to show me if a password was accepted.
+
+```spl
+| stats count values(action) values(src_ip) as src_ip values(log_hostname) as hostname values(process) as process by username
+```
+
+Now I can see there was an accepted password event against john.smith which gives me sufficient grounds to confirm a brute force attack occurred against the user and the threat actor has gained initial access to host machine tryhackme-2404
+
+<img width="667" height="305" alt="image" src="https://github.com/user-attachments/assets/538cd06f-7cf2-4988-87c8-692f0d84c428" />
+
+<img width="1360" height="435" alt="image" src="https://github.com/user-attachments/assets/1fe313da-1ce8-4b57-8746-4fb8c8c2adfb" />
+
+---
+
+## Conclusion
+
+At this stage I would class this alert as a True Positive and escalate it to L2 for further investigation.
+
+---
+
+## Questions Remaining
+
+Some questions remain that the team will investigate.
+
+- Why did the attacker have a local IP address? Could it be that they are already inside our network? If so, for how long?
+- How did the attacker obtain information about the users, specifically their usernames?
+- What happened after the attacker gained access to the tryhackme-2404 host?
+
+---
+
+## Additional Findings
+
+For learning purposes I was able to identify a few other things.
+
+- Looking at the start time and end time of the 503 events, the timespan of the brute force attack was approximately 5 minutes.
+
+- Searching the following reveals john.smith escalated privileges to root by using the "su" command.
+
+```spl
+index="linux-alert" sourcetype="linux_secure"
+| search "su" AND "john.smith"
+```
+
+<img width="1110" height="314" alt="image" src="https://github.com/user-attachments/assets/a7735cb6-b5e4-4bec-9752-eb35658e0796" />
+
+And lastly I can see that the host machine tryhackme-2404 added a new user called system-utm with the search
+
+```spl
+index="linux-alert" sourcetype="linux_secure"
+| search "useradd"
+```
+
+---
+
+
+# Alert 2 - Windows Persistence (Scheduled Task)
+
+## Scenario
+
+You are working as a Level 1 SOC Analyst on shift at an MSSP. An alert has come through indicating that a suspicious scheduled task was created on a host.
+
+### Alert Details
+
+| Field | Value |
+|-------|-------|
+| **Alert Name** | Potential Task Scheduler Persistence Identified |
+| **Time** | 30/08/2025 10:06:07 AM |
+| **Host** | WIN-H015 |
+| **User** | oliver.thompson |
+| **Task Name** | AssessmentTaskOne |
+
+Your job is to investigate this activity and decide whether it should be considered suspicious.
+
+---
+
+## Investigation
+
+Firstly, I will assess the alert before jumping into SIEM. Using the asset inventory I can see the affected host is a work station for user oliver.thompson.
+
+Checking the identity table, I have determined that Oliver Thompson is a System Engineer.
+
+Now with a better picture in mind, moving into SIEM. I will search for the flagged task "AssesmentTaskOne" along with the event code 4698 indicating a new scheduled task is created.
+
+```spl
+index="win-alert" EventCode=4698 AssessmentTaskOne
+| table _time EventCode user_name host Task_Name Message
+```
+
+The search results show 1 event relating to this activity.
+
+<img width="1361" height="489" alt="image" src="https://github.com/user-attachments/assets/56988fd3-1559-48a8-83be-b8a30c63817e" />
+
+Investigating the alert message, I discover in the Trigger section that the scheduled task is created at 30/08/2025 at 1015hrs and configured to run daily at the same time.
+
+<img width="587" height="210" alt="image" src="https://github.com/user-attachments/assets/1e7fc375-cc2c-4d0e-8988-5935a2ea59a0" />
+
+Further investigation into the message contents. In the Exec section I can see a powershell command uses certutil to download rv.exe from the tryhotme domain to Oliver's Temp folder under the name "DataCollector.exe".
+
+Then it launches the file using the powershell command "Start-Process".
+
+<img width="773" height="220" alt="image" src="https://github.com/user-attachments/assets/3d5a2400-6a6a-4388-acbf-d8b3412828e5" />
+
+And in the Principals section, I can see all this activity is executed by the user oliver.thompson.
+
+<img width="425" height="216" alt="image" src="https://github.com/user-attachments/assets/c496db85-ba3f-42a3-98e2-5f883f99227f" />
+
+---
+
+## Conclusion
+
+This is a clear indicator of persistence activity. At this point I would do some threat intelligence on the domain name on a platform like VirusTotal which may reveal some more information about the threat actor. In any case, this would be classified as a True Positive and escalated to a L2 analyst.
+
+---
+
+## Questions Remaining
+
+Other questions that stem from this investigation are;
+
+- How did the threat actor gain access to Oliver's account?
+- How was the host WIN-H015 compromised?
+- How was the scheduled task created?
+
+---
+
+## Additional Findings
+
+For learning purposes, I also discovered the ProcessId of the process that created this malicious task to be 5816.
+
+```spl
+index="win-alert" AssessmentTaskOne
+| search "ProcessId"
+```
+
+<img width="1100" height="333" alt="image" src="https://github.com/user-attachments/assets/e56d320b-a165-434d-867e-accd1441f76c" />
+
+From this I also identified the parent process as cmd.exe.
+
+I then had a look to establish any enumeration of local groups and found a net command used to discover the Administrators local group.
+
+<img width="662" height="389" alt="image" src="https://github.com/user-attachments/assets/81f7ccf5-c035-4d38-907a-1caaf6cb38da" />
+
+Lastly, i ran a search on successful logons and displayed a table of source network addresses against the workstation names, and found the same IP logged onto both flagged workstation WIN-H015 and another one named DEV-QA-SERVER. Clicking on DEV-QA-SERVER I could determine the attacker had used this workstation to log into the targeted host machine.
+
+<img width="769" height="207" alt="image" src="https://github.com/user-attachments/assets/3841c188-cc18-4192-a7a5-90215de36e94" />
+
+<img width="545" height="367" alt="image" src="https://github.com/user-attachments/assets/1436e763-d66c-4981-8073-01d7a5905463" />
+
+
+---
+
+# Alert 3 - Web Application (Web Shell)
+
+## Scenario
+
+Your shift as a SOC L1 analyst continues, and you’ve now received the next alert that needs to be investigated. This time, the activity is related to the web.
+
+### Alert Details
+
+| Field | Value |
+|-------|-------|
+| **Alert Name** | Potential Web Shell Upload Detected |
+| **Time** | 14/09/2025 09:31:51 AM |
+| **Resource** | http://web.trywinme.thm |
+| **Suspicious IP** | 171.251.232.40 |
+
+Your job is to investigate this activity and decide whether it should be considered suspicious.
+
+---
+
+## Investigation
+
+The first thing of interest, and concern, is that the mentioned domain http://web.trywinme.thm is the organization's website hosted on the web server. I immediately take the suspicious IP listed and check it on the threat intel platform abuseipdb.com.
+
+<img width="1310" height="1116" alt="image" src="https://github.com/user-attachments/assets/003df7bf-f5fc-4ddb-bd1d-dc9bb33cdaf3" />
+
+It looks like this IP has been flagged as malicious more than 3000 times.
+
+Jumping into SIEM I examine the activity carried out by the IP address.
+
+<img width="1353" height="468" alt="image" src="https://github.com/user-attachments/assets/d0b30118-9331-41ef-9d8d-e20bfcc700d8" />
+
+There are a lot of events, but notably I see the User-Agent is set to Hydra. This is a popular brute forcing tool. On top of that, I can see the uri_path is /wp-login.php on many of the events. This is a clear indication of malicious activity.
+
+Fine tuning the search, i included referer domain and excluded Hydra from the search.
+
+```spl
+index="web-alert" 171.251.232.40 useragent!="Mozilla/5.0 (Hydra)"
+| table _time clientip useragent uri_path referer referer_domain method status
+```
+
+<img width="1347" height="428" alt="image" src="https://github.com/user-attachments/assets/1812222e-0111-40d6-b2d0-17d0ef7250e2" />
+
+Straight away what stands out is there was a suspicious POST request for admin-ajax.php with a referer pointing to **theme-editor.php?file=b374k.php** - this is strange because Wordpress themes should not reference arbitrary .php files. file=b374k.php suggestes the attacker has uploaded the file or is interacting with a web shell.
+
+I then searched for the suspicious file and changed uri_path to uri.
+
+```spl
+index=web-alert 171.251.232.40 b374k.
+| table _time clientip useragent uri referer referer_domain method status
+| sort + _time
+```
+
+<img width="1364" height="618" alt="image" src="https://github.com/user-attachments/assets/1693eb51-9c60-4f40-be47-ccda664b172a" />
+
+At the bottom I can see the attacker established access to a possible web shell file "b374k.php" and then began executing activity through it. Unfortunately it was not found in the logs how the attacker initially uploaded the web shell to the server.
+
+But sometimes attackers use popular web shell files without changing any filenames. So I did a quick Google search to see what came up.
+
+<img width="927" height="528" alt="image" src="https://github.com/user-attachments/assets/193da91f-b189-41af-ae0f-aba8d67db5c9" />
+
+This confirms that b374k.php is a web shell file.
+
+In summary I found malicious activity originating from a suspicious Vietnamese IP 171.251.232.40 targeting the web server. The attack started with the use of Hydra to brute force login on wp-login.php followed by clear inidcation of web shell activity involving "b374k.php".
+
+---
+
+## Conclusion
+
+I classify this event as a True Positive and immediately escalate to a L2 analyst for further investigation.
+
+---
+
+## Additional Findings
+
+For learning purposes and digging a little deeper:
+
+The start time of the brute force attack with Hydra occurred at:
+
+`2025-09-14 21:20:27`
+
+The number of requests made to the server by the attacker via the web shell was
+
+`4`
+
+I established the User-Agent the attacker used when interacting with the shell to be
+
+```text
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+```
