@@ -58,6 +58,7 @@ Aspiring SOC Analyst with interests in:
 ### [Log Analysis](https://github.com/AdrianGanter/Portfolio/tree/8f00dfe976a65ba2ef9db63dc96dfd7abe325455/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis)
 - [Basic Analysis with Splunk](https://github.com/AdrianGanter/Portfolio/blob/8f00dfe976a65ba2ef9db63dc96dfd7abe325455/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis/01.%20Basic%20Analysis%20with%20Splunk.md)
 - [Alert Triage with Splunk (Linux Access, Windows Persistence & Web Shell)](https://github.com/AdrianGanter/Portfolio/blob/98c11ff146d1a385e35a0e139eaba973aa413e53/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis/02.%20Alert%20Triage%20with%20Splunk.md)
+- [Alert Triage with Splunk (Multi Alert Analysis)](https://github.com/AdrianGanter/Portfolio/blob/23146722069ca94fe2c65b763524bc37438de7f4/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis/03.%20Alert%20Triage%20with%20Elastic.md)
 
 ---
 
