@@ -42,6 +42,8 @@ Aspiring SOC Analyst with interests in:
 - [Linux Security Monitoring](https://github.com/AdrianGanter/Portfolio/tree/94450bea390a9e75804455aaf9169b43b54a5ef7/Cyber-Security/TryHackMe/SOC%20Level%201/Linux%20Security%20Monitoring)
 - [Malware Concepts for SOC](https://github.com/AdrianGanter/Portfolio/tree/c3ca214ce8bfbd6fb6d1128b9022fe95bf72dc38/Cyber-Security/TryHackMe/SOC%20Level%201/Malware%20Concepts%20for%20SOC)
 - [Threat Analysis Tools](https://github.com/AdrianGanter/Portfolio/tree/ac528b940511d04f795251e507a959e37c39cbaf/Cyber-Security/TryHackMe/SOC%20Level%201/Threat%20Analysis%20Tools)
+- [SIEM Triage for SOC](https://github.com/AdrianGanter/Portfolio/tree/0d56ae1c11ddc4fa39381a0621f739682a4ca903/Cyber-Security/TryHackMe/SOC%20Level%201/SIEM%20Triage%20for%20SOC)
+
 ---
 
 ## 🧪 [Labs & Practicals](https://github.com/AdrianGanter/Portfolio/tree/main/Cyber-Security/Labs%20%26%20Practicals)
@@ -59,7 +61,8 @@ Aspiring SOC Analyst with interests in:
 - [Basic Analysis with Splunk](https://github.com/AdrianGanter/Portfolio/blob/8f00dfe976a65ba2ef9db63dc96dfd7abe325455/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis/01.%20Basic%20Analysis%20with%20Splunk.md)
 - [Alert Triage with Splunk (Linux Access, Windows Persistence & Web Shell)](https://github.com/AdrianGanter/Portfolio/blob/98c11ff146d1a385e35a0e139eaba973aa413e53/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis/02.%20Alert%20Triage%20with%20Splunk.md)
 - [Alert Triage with Splunk (Multi Alert Analysis)](https://github.com/AdrianGanter/Portfolio/blob/23146722069ca94fe2c65b763524bc37438de7f4/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis/03.%20Alert%20Triage%20with%20Elastic.md)
-- [Potential C2 Communication Analysis](https://github.com/AdrianGanter/Portfolio/blob/705fd40819fe04c7f53db7c07191e4d5759562a6/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis/04.%20Potential%20C2%20Communication%20Analysis.md)
+- [Potential C2 Communication - Elastic Analysis](https://github.com/AdrianGanter/Portfolio/blob/705fd40819fe04c7f53db7c07191e4d5759562a6/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis/04.%20Potential%20C2%20Communication%20Analysis.md)
+- [Potential Persistence - Splunk Analysis](https://github.com/AdrianGanter/Portfolio/blob/d3d4c278e920d71e05be941bd7bac198df03a208/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis/05.%20Potential%20Persistence%20-%20Splunk%20Analysis.md)
 
 ---
 
