@@ -102,11 +102,9 @@ The project used Unreal Engine's cinematic tools to create camera movement, tran
 
 A billboard-style character system was developed where the live green-screened performer continuously rotated to face the active camera, allowing dynamic camera movement around the performer while maintaining visual consistency.
 
+<img width="568" height="320" alt="image" src="https://github.com/user-attachments/assets/71fbe713-b634-43af-9cfb-1578f1dc0560" />
 
-
-<img width="1936" height="1096" alt="ScreenShot00006" src="https://github.com/user-attachments/assets/14f56622-06a7-48a7-8855-875ca38ef7a5" />
-
-<img width="1472" height="838" alt="image" src="https://github.com/user-attachments/assets/c34bdf30-7576-4db7-8912-98a0f1da6fc1" />
+<img width="568" height="320" alt="image" src="https://github.com/user-attachments/assets/d0697ca5-a4e8-4e52-bf9d-b6e425437400" />
 
 ---
 
