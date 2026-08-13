@@ -67,6 +67,9 @@ The project evolved into a highly produced livestream experience.
 
 A green-screen setup allowed Grym to perform inside custom digital environments while visual effects, camera angles, and scene transitions enhanced performances.
 
+
+
+
 Production elements included:
 
 - Layered environments
@@ -77,13 +80,18 @@ Production elements included:
 
 A secondary low-angle camera was introduced to create dramatic action shots during heavy musical sections, helping performances feel more cinematic and energetic.
 
-<img width="640" height="386" alt="GRym Solar Temple" src="https://github.com/user-attachments/assets/21c2d85b-eabb-47ac-b323-147448825c16" />
+
+
 
 ---
 
 ### Phase 4 – Unreal Engine Integration
 
 A major milestone was the transition from static 2D environments to a fully realized 3D world built in Unreal Engine.
+
+<img width="568" height="320" alt="Remembrance GIF" src="https://github.com/user-attachments/assets/65463909-d200-442d-bcec-949d780a92bb" />
+
+<img width="568" height="320" alt="FloorCam" src="https://github.com/user-attachments/assets/eaafccc0-a087-4d44-8562-9d241a7b78ee" />
 
 Over approximately a year of development, a prototype virtual world was created featuring:
 
@@ -97,8 +105,10 @@ The project used Unreal Engine's cinematic tools to create camera movement, tran
 
 A billboard-style character system was developed where the live green-screened performer continuously rotated to face the active camera, allowing dynamic camera movement around the performer while maintaining visual consistency.
 
+
 <img width="1936" height="1096" alt="ScreenShot00006" src="https://github.com/user-attachments/assets/14f56622-06a7-48a7-8855-875ca38ef7a5" />
 
+<img width="1472" height="838" alt="image" src="https://github.com/user-attachments/assets/c34bdf30-7576-4db7-8912-98a0f1da6fc1" />
 
 ---
 
