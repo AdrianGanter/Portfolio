@@ -89,9 +89,11 @@ A secondary low-angle camera was introduced to create dramatic action shots duri
 
 A major milestone was the transition from static 2D environments to a fully realized 3D world built in Unreal Engine.
 
-<img width="568" height="320" alt="Remembrance GIF" src="https://github.com/user-attachments/assets/65463909-d200-442d-bcec-949d780a92bb" />
+<img width="568" height="320" alt="Remembrance GIF" src="https://github.com/user-attachments/assets/0fd5b531-4305-4836-b976-b906dddaeeff" />
 
-<img width="568" height="320" alt="FloorCam" src="https://github.com/user-attachments/assets/eaafccc0-a087-4d44-8562-9d241a7b78ee" />
+
+<img width="568" height="320" alt="FloorCam" src="https://github.com/user-attachments/assets/350d0dad-43b5-48a3-84f1-68004e096a00" />
+
 
 Over approximately a year of development, a prototype virtual world was created featuring:
 
