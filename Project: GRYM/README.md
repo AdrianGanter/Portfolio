@@ -102,9 +102,7 @@ The project used Unreal Engine's cinematic tools to create camera movement, tran
 
 A billboard-style character system was developed where the live green-screened performer continuously rotated to face the active camera, allowing dynamic camera movement around the performer while maintaining visual consistency.
 
-<img width="568" height="320" alt="image" src="https://github.com/user-attachments/assets/71fbe713-b634-43af-9cfb-1578f1dc0560" />
-
-<img width="568" height="320" alt="image" src="https://github.com/user-attachments/assets/d0697ca5-a4e8-4e52-bf9d-b6e425437400" />
+<img width="568" height="320" alt="ezgif-3660857cbac8b703" src="https://github.com/user-attachments/assets/6d43c171-3cf4-4991-a027-9856e468c5ef" />
 
 ---
 
@@ -113,6 +111,8 @@ A billboard-style character system was developed where the live green-screened p
 The project's central narrative followed Grym's journey through the Nether Realm.
 
 One major storyline focused on Grym's search for a mysterious Wizard character who had disappeared after being captured by the First Demon of Hell.
+
+<img width="1920" height="1080" alt="Card 1" src="https://github.com/user-attachments/assets/7315ea2f-bdfe-4a19-b57c-18fb230c10a3" />
 
 This storyline introduced:
 
@@ -126,7 +126,7 @@ Songs from a planned album served as narrative chapters, advancing the story thr
 
 Although the storyline ultimately remained unfinished, multiple chapters, locations, and narrative arcs were successfully developed and performed live.
 
-<img width="1920" height="1080" alt="Card 1" src="https://github.com/user-attachments/assets/7315ea2f-bdfe-4a19-b57c-18fb230c10a3" />
+<img width="568" height="320" alt="ezgif-3065223d5031b8b9" src="https://github.com/user-attachments/assets/896ff6e9-045b-4914-84b6-f41556414fb8" />
 
 ---
 
