@@ -38,6 +38,8 @@ Grym initially started as a solo heavy metal project focused on:
 
 The visual identity centered around a Grim Reaper character performing music live using costumes, lighting, fog effects, and themed environments.
 
+<img width="640" height="364" alt="SmartSelect_20201206-221345_Twitch" src="https://github.com/user-attachments/assets/b5b7917e-c48a-4bcc-bd79-7bdd0df9126e" />
+
 ---
 
 ### Phase 2 – Storytelling & World Building
@@ -55,12 +57,6 @@ New elements included:
 Songs became connected to story events, allowing music releases to advance the world and characters rather than existing as standalone releases.
 
 <img width="1920" height="1080" alt="card 2" src="https://github.com/user-attachments/assets/e61b8d6b-8212-4f26-b0e0-7850b33d0c2c" />
-
-<img width="640" height="364" alt="SmartSelect_20201206-221345_Twitch" src="https://github.com/user-attachments/assets/b5b7917e-c48a-4bcc-bd79-7bdd0df9126e" />
-
-
-<img width="640" height="386" alt="GRym Solar Temple" src="https://github.com/user-attachments/assets/21c2d85b-eabb-47ac-b323-147448825c16" />
-
 
 
 ---
@@ -81,7 +77,7 @@ Production elements included:
 
 A secondary low-angle camera was introduced to create dramatic action shots during heavy musical sections, helping performances feel more cinematic and energetic.
 
-<img width="1920" height="1080" alt="Card 1" src="https://github.com/user-attachments/assets/7315ea2f-bdfe-4a19-b57c-18fb230c10a3" />
+<img width="640" height="386" alt="GRym Solar Temple" src="https://github.com/user-attachments/assets/21c2d85b-eabb-47ac-b323-147448825c16" />
 
 ---
 
@@ -100,6 +96,9 @@ Over approximately a year of development, a prototype virtual world was created 
 The project used Unreal Engine's cinematic tools to create camera movement, transitions, and narrative scenes that could be integrated directly into live performances.
 
 A billboard-style character system was developed where the live green-screened performer continuously rotated to face the active camera, allowing dynamic camera movement around the performer while maintaining visual consistency.
+
+<img width="1936" height="1096" alt="ScreenShot00006" src="https://github.com/user-attachments/assets/14f56622-06a7-48a7-8855-875ca38ef7a5" />
+
 
 ---
 
@@ -120,6 +119,8 @@ This storyline introduced:
 Songs from a planned album served as narrative chapters, advancing the story through both music and live performances.
 
 Although the storyline ultimately remained unfinished, multiple chapters, locations, and narrative arcs were successfully developed and performed live.
+
+<img width="1920" height="1080" alt="Card 1" src="https://github.com/user-attachments/assets/7315ea2f-bdfe-4a19-b57c-18fb230c10a3" />
 
 ---
 
@@ -220,9 +221,6 @@ Features included:
 
 Each spawned skeleton displayed the viewer's username, creating a personalized connection between audience members and the virtual world.
 
-<img width="1920" height="1080" alt="Card 3" src="https://github.com/user-attachments/assets/7640c576-47ea-415d-8bed-08427a9aec6b" />
-
-
 ---
 
 ### Interactive Arena System
@@ -238,6 +236,9 @@ Interactions included:
 - Event participation
 
 This transformed passive viewers into active participants within the performance space.
+
+**▶️ Click the image below to watch the video**
+[![▶ Watch Video](https://github.com/user-attachments/assets/7640c576-47ea-415d-8bed-08427a9aec6b)](https://www.youtube.com/watch?v=N84fiultTY0)
 
 ---
 
