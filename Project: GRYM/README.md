@@ -6,8 +6,7 @@ Grym was an independent multimedia project that began as a solo heavy metal musi
 
 The project was built around the character **Grym**, a Grim Reaper-inspired musician who existed within an original fantasy world known as the Nether Realm and later exploring the oceans of Hell on the Flying Dutchman. What started as a simple concept—a Grim Reaper performing heavy metal music live online—gradually expanded into a long-form narrative featuring original characters, locations, lore, and ongoing story arcs.
 
-<img width="1920" height="1080" alt="Card 1" src="https://github.com/user-attachments/assets/7315ea2f-bdfe-4a19-b57c-18fb230c10a3" />
-
+<img width="4000" height="2256" alt="Captain Grym" src="https://github.com/user-attachments/assets/f7ca2ece-a02d-4e10-b88a-6cd3cbb80e44" />
 
 Over several years, the project grew into a highly interactive production that blended:
 
@@ -57,6 +56,12 @@ Songs became connected to story events, allowing music releases to advance the w
 
 <img width="1920" height="1080" alt="card 2" src="https://github.com/user-attachments/assets/e61b8d6b-8212-4f26-b0e0-7850b33d0c2c" />
 
+<img width="640" height="364" alt="SmartSelect_20201206-221345_Twitch" src="https://github.com/user-attachments/assets/b5b7917e-c48a-4bcc-bd79-7bdd0df9126e" />
+
+
+<img width="640" height="386" alt="GRym Solar Temple" src="https://github.com/user-attachments/assets/21c2d85b-eabb-47ac-b323-147448825c16" />
+
+
 
 ---
 
@@ -75,6 +80,8 @@ Production elements included:
 - Automated visual sequences
 
 A secondary low-angle camera was introduced to create dramatic action shots during heavy musical sections, helping performances feel more cinematic and energetic.
+
+<img width="1920" height="1080" alt="Card 1" src="https://github.com/user-attachments/assets/7315ea2f-bdfe-4a19-b57c-18fb230c10a3" />
 
 ---
 
