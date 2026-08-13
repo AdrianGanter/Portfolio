@@ -4,7 +4,10 @@
 
 Grym was an independent multimedia project that began as a solo heavy metal music venture and evolved into an interactive live entertainment experience combining original music, storytelling, automation, livestream production, virtual world-building, and audience participation.
 
-The project was built around the character **Grym**, a Grim Reaper-inspired musician who existed within an original fantasy world known as the Nether Realm. What started as a simple concept—a Grim Reaper performing heavy metal music live online—gradually expanded into a long-form narrative featuring original characters, locations, lore, and ongoing story arcs.
+The project was built around the character **Grym**, a Grim Reaper-inspired musician who existed within an original fantasy world known as the Nether Realm and later exploring the oceans of Hell on the Flying Dutchman. What started as a simple concept—a Grim Reaper performing heavy metal music live online—gradually expanded into a long-form narrative featuring original characters, locations, lore, and ongoing story arcs.
+
+<img width="1920" height="1080" alt="Card 1" src="https://github.com/user-attachments/assets/7315ea2f-bdfe-4a19-b57c-18fb230c10a3" />
+
 
 Over several years, the project grew into a highly interactive production that blended:
 
@@ -18,6 +21,8 @@ Over several years, the project grew into a highly interactive production that b
 - Real-time visual effects
 
 The goal was to create a unique live experience where music, narrative, technology, and community participation all existed within the same world.
+
+
 
 ---
 
@@ -44,11 +49,14 @@ New elements included:
 
 - Original lore
 - Character development
-- The Nether Realm setting
+- Locations like the Nether Realm and Hell
 - Story-driven livestreams
 - Narrative progression through music releases
 
 Songs became connected to story events, allowing music releases to advance the world and characters rather than existing as standalone releases.
+
+<img width="1920" height="1080" alt="card 2" src="https://github.com/user-attachments/assets/e61b8d6b-8212-4f26-b0e0-7850b33d0c2c" />
+
 
 ---
 
@@ -204,6 +212,9 @@ Features included:
 - Participating in world events
 
 Each spawned skeleton displayed the viewer's username, creating a personalized connection between audience members and the virtual world.
+
+<img width="1920" height="1080" alt="Card 3" src="https://github.com/user-attachments/assets/7640c576-47ea-415d-8bed-08427a9aec6b" />
+
 
 ---
 
