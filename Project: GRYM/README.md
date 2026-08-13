@@ -38,8 +38,6 @@ Grym initially started as a solo heavy metal project focused on:
 
 The visual identity centered around a Grim Reaper character performing music live using costumes, lighting, fog effects, and themed environments.
 
-<img width="640" height="364" alt="SmartSelect_20201206-221345_Twitch" src="https://github.com/user-attachments/assets/b5b7917e-c48a-4bcc-bd79-7bdd0df9126e" />
-
 ---
 
 ### Phase 2 – Storytelling & World Building
@@ -58,6 +56,8 @@ Songs became connected to story events, allowing music releases to advance the w
 
 <img width="1920" height="1080" alt="card 2" src="https://github.com/user-attachments/assets/e61b8d6b-8212-4f26-b0e0-7850b33d0c2c" />
 
+[CLICK HERE](https://youtu.be/zh83RyQldAo?si=CDOTi07YlciyecDT) to watch the Channel Trailer 
+
 
 ---
 
@@ -67,8 +67,7 @@ The project evolved into a highly produced livestream experience.
 
 A green-screen setup allowed Grym to perform inside custom digital environments while visual effects, camera angles, and scene transitions enhanced performances.
 
-
-
+<img width="640" height="364" alt="SmartSelect_20201206-221345_Twitch" src="https://github.com/user-attachments/assets/8317c42c-4d8b-468f-8b00-90338fd1e483" />
 
 Production elements included:
 
@@ -81,7 +80,7 @@ Production elements included:
 A secondary low-angle camera was introduced to create dramatic action shots during heavy musical sections, helping performances feel more cinematic and energetic.
 
 
-
+<img width="640" height="386" alt="GRym Solar Temple" src="https://github.com/user-attachments/assets/2a33f550-48eb-437b-807c-0d0962ea7d55" />
 
 ---
 
@@ -90,10 +89,6 @@ A secondary low-angle camera was introduced to create dramatic action shots duri
 A major milestone was the transition from static 2D environments to a fully realized 3D world built in Unreal Engine.
 
 <img width="568" height="320" alt="Remembrance GIF" src="https://github.com/user-attachments/assets/0fd5b531-4305-4836-b976-b906dddaeeff" />
-
-
-<img width="568" height="320" alt="FloorCam" src="https://github.com/user-attachments/assets/350d0dad-43b5-48a3-84f1-68004e096a00" />
-
 
 Over approximately a year of development, a prototype virtual world was created featuring:
 
@@ -106,6 +101,7 @@ Over approximately a year of development, a prototype virtual world was created 
 The project used Unreal Engine's cinematic tools to create camera movement, transitions, and narrative scenes that could be integrated directly into live performances.
 
 A billboard-style character system was developed where the live green-screened performer continuously rotated to face the active camera, allowing dynamic camera movement around the performer while maintaining visual consistency.
+
 
 
 <img width="1936" height="1096" alt="ScreenShot00006" src="https://github.com/user-attachments/assets/14f56622-06a7-48a7-8855-875ca38ef7a5" />
