@@ -1,4 +1,4 @@
-<img width="939" height="845" alt="image" src="https://github.com/user-attachments/assets/72f6efb5-c5e0-49e7-8270-1cac59f81396" /># Tempest Incident
+# Tempest Incident
 
 In this incident, you will act as an Incident Responder from an alert triaged by one of your Security Operations Center analysts. The analyst has confirmed that the alert has a CRITICAL severity that needs further investigation.
 
@@ -47,7 +47,7 @@ Back in the Sysmon View application I identified the PID of the Microsoft Word p
 
 <img width="729" height="564" alt="image" src="https://github.com/user-attachments/assets/d9049933-d4fb-4c5e-be6a-1199786feed8" />
 
-Looking at the network connection chain of events I located the IPv4 address associated with the malicious domain `phishteam.xyz`
+Looking at the network connection chain of events I located the IPv4 address associated with the malicious domain `phishteam.xyz` as `167.71.199.191`
 
 <img width="368" height="466" alt="image" src="https://github.com/user-attachments/assets/d84040fe-8ada-43ee-830d-c8a668b28144" />
 
@@ -57,8 +57,7 @@ Jumping back into the event viewer I followed the chain of events that occurred 
 
 <img width="859" height="765" alt="image" src="https://github.com/user-attachments/assets/60708ea7-39a9-4c64-9297-c51cc2f1ae75" />
 
-The command runs `msdt.exe` which is abused by attackers for Remote Code Execution under the CVE-2022-30190
-Otherwise known as Follina. This vulnerability allows attackers to use malicious word documents to invoke Microsoft Support Diagnostic Tool (MSDT) to gain RCE.
+The command runs `msdt.exe` which is abused by attackers for Remote Code Execution under the CVE-2022-30190. Otherwise known as Follina. This vulnerability allows attackers to use malicious word documents to invoke Microsoft Support Diagnostic Tool (MSDT) to gain RCE.
 
 ---
 
@@ -87,7 +86,7 @@ I then jumped back into the Sysmon View and investigated the .exe and found it w
 
 ### The implanted payload executes once the user logs into the machine. What is the executed command upon a successful login of the compromised user?
 
-Inside of Sysmon View sitll, I decided to look into the powershell.exe to see if I could spot any executed commands or additional spawned processes. I discovered a suspicious process named ch.exe
+Inside of Sysmon View still, I decided to look into the powershell.exe to see if I could spot any executed commands or additional spawned processes. I discovered a suspicious process named ch.exe
 
 <img width="785" height="823" alt="image" src="https://github.com/user-attachments/assets/93853ed2-c3ea-425e-9cd9-9141bc2dfed7" />
 
@@ -101,7 +100,7 @@ Looking into first.exe I found the powershell command in question
 
 <img width="724" height="803" alt="image" src="https://github.com/user-attachments/assets/8bd28b81-a9f4-429b-937d-5f88db2bc5da" />
 
-Based on Sysmon logs, what is the SHA256 hash of the malicious binary downloaded for stage 2 execution?
+### Based on Sysmon logs, what is the SHA256 hash of the malicious binary downloaded for stage 2 execution?
 
 The SHA256 hash is: `CE278CA242AA2023A4FE04067B0A32FBD3CA1599746C160949868FFC7FC3D7D8`
 
@@ -109,7 +108,7 @@ The SHA256 hash is: `CE278CA242AA2023A4FE04067B0A32FBD3CA1599746C160949868FFC7FC
 
 ### The stage 2 payload downloaded establishes a connection to a c2 server. What is the domain and port used by the attacker?
 
-Back in the event viewer I investigated a DNS request that revealed a connection to the domain resolvecyber.xyz on port 80 (http)
+Back in the event viewer I investigated a DNS query that revealed the domain resolvecyber.xyz which a network connection is made on port 80 (http)
 
 <img width="767" height="592" alt="image" src="https://github.com/user-attachments/assets/799c7a02-4242-4b8f-a142-8614b0163c87" />
 
