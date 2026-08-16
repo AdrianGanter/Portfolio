@@ -249,4 +249,42 @@ Looking into the final.exe binary on Sysmon View I can see a network connection 
 
 ### Upon achieving SYSTEM access, the attacker then created two users. What are the account names?
 
+I opened up the windows logs in event viewer and located any new user accounts created around the time frame of the escalated privileges
+
+<img width="814" height="627" alt="image" src="https://github.com/user-attachments/assets/9c74d734-c421-4d4b-b0b2-959afd177058" />
+
+2 users were created, `shion` and `shuna`
+
+
+### Prior to the successful creation of the accounts, the attacker executed commands that failed in the creation attempt. What is the missing option that made the attempt fail?
+
+Accounts were added approx 1727hrs but on the event viewer around 1723hrs attempts were made to create the accounts but the attacker forgot the command `/add`
+
+<img width="792" height="747" alt="image" src="https://github.com/user-attachments/assets/7bb80143-d046-4a17-8119-e7d1cfbf67cf" />
+
+
+
+
+### Based on windows event logs, the accounts were successfully created. What is the event ID that indicates the account creation activity?
+
+The event ID for new account created is `4720`
+
+
+### The attacker added one of the accounts in the local administrator's group. What is the command used by the attacker?
+
+Shortly after the account creations, the attacker adds the user `shion` to the administrators group with `net localgroup administrators /add shion`
+
+<img width="874" height="735" alt="image" src="https://github.com/user-attachments/assets/580e7a08-6b02-407d-a82b-6e1ca6967ea4" />
+
+### Based on windows event logs, the account was successfully added to a sensitive group. What is the event ID that indicates the addition to a sensitive local group?
+
+The event ID in windows logs is `4732`
+
+### After the account creation, the attacker executed a technique to establish persistent administrative access. What is the command executed by the attacker to achieve this?
+
+The technique for persistence is traced back to the `sc.exe` binary. The command was captured on Sysmon View and event viewer
+
+<img width="646" height="412" alt="image" src="https://github.com/user-attachments/assets/8871c2bf-b6a6-453b-a809-74ff093ff7e2" />
+
+<img width="811" height="685" alt="image" src="https://github.com/user-attachments/assets/e33e8902-d24e-4113-8dd5-3088bf8a4080" />
 
