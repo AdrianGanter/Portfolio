@@ -64,6 +64,10 @@ Aspiring SOC Analyst with interests in:
 - [Potential C2 Communication - Elastic Analysis](https://github.com/AdrianGanter/Portfolio/blob/705fd40819fe04c7f53db7c07191e4d5759562a6/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis/04.%20Potential%20C2%20Communication%20Analysis.md)
 - [Potential Persistence - Splunk Analysis](https://github.com/AdrianGanter/Portfolio/blob/d3d4c278e920d71e05be941bd7bac198df03a208/Cyber-Security/Labs%20%26%20Practicals/Log%20Analysis/05.%20Potential%20Persistence%20-%20Splunk%20Analysis.md)
 
+### Full Investigation Challenges
+- [Full Attack Chain Investigation (Tempest)](https://github.com/AdrianGanter/Portfolio/blob/06ef2a4ff7959300ab44e55c23d2a5b86e052721/Cyber-Security/Labs%20%26%20Practicals/Full%20Attack%20Chain%20Investigation%20(Tempest).md)
+  
+
 ---
 
 # 🛡️ [BHP's Security & Emergency Operations Centre (SEOC)](https://github.com/AdrianGanter/Portfolio/tree/97479c8b858fa67841e758edd9d83128c41ef977/SEOC)
