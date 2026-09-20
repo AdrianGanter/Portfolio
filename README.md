@@ -2,14 +2,37 @@
 
 ## About Me
 
-Currently working in BHP's Security & Emergency Operations Center (SEOC) supporting critical infrastructure. 
+Previously worked in BHP's Security & Emergency Operations Center (SEOC) supporting critical mining infrastructure. 
 
 Aspiring SOC Analyst with interests in:
 - Threat Detection
 - Incident Response
 - Security Operations
 - Technology & Automation
-  
+
+Recently completed the [SOC Level 1](https://github.com/AdrianGanter/Portfolio/tree/97fa8964f15a3bff37748d8558aa3cced022827e/Cyber-Security/TryHackMe/SOC%20Level%201) & [Cyber Security 101](https://github.com/AdrianGanter/Portfolio/tree/97fa8964f15a3bff37748d8558aa3cced022827e/Cyber-Security/TryHackMe/Cyber%20101) pathways on TryHackMe, and the [SAL1 Certification](https://github.com/AdrianGanter/Portfolio/blob/97fa8964f15a3bff37748d8558aa3cced022827e/Cyber-Security/SAL1%20Certification.md)
+
+<img width="1096" height="703" alt="image" src="https://github.com/user-attachments/assets/87a2e16c-d34f-4104-a049-dd0b8a90e6a9" />
+
+---
+
+## Things I enjoy outside of work:
+- Going on adventures with my family
+- Tinkering with electronics
+- Exploring outdoors
+- Growing fruits and vegetables / self sufficiency
+- Playing guitar / writing music
+- Playing video games (mostly older titles)
+- Meditation 
+- Learning new things
+
+## Goals
+- Build a new career in cyber security
+- Build or buy our own home
+- Have a flourishing fruit + veg garden
+- Write another album
+
+
 ---
 
 # Cyber Security Studies
