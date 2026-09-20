@@ -6,9 +6,7 @@ On 18/09/2026 I completed the Security Analyst (SAL1) certification provided by 
 
 This involved:
 - 1 hour 80 question multiple choice
-
 - 2 hour SOC Simulator #1
-
 - 2 hour SOC Simulator #2
 
 The multiple choice had a mix of questions around SOC fundamentals and Cyber Security in general. 
