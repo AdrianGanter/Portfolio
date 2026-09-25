@@ -14,24 +14,6 @@ Recently completed the [SOC Level 1](https://github.com/AdrianGanter/Portfolio/t
 
 <img width="1096" height="703" alt="image" src="https://github.com/user-attachments/assets/87a2e16c-d34f-4104-a049-dd0b8a90e6a9" />
 
----
-
-## Things I enjoy outside of work:
-- Going on adventures with my family
-- Tinkering with electronics
-- Exploring outdoors
-- Growing fruits and vegetables / self sufficiency
-- Playing guitar / writing music
-- Playing video games (mostly older titles)
-- Meditation 
-- Learning new things
-
-## Goals
-- Build a new career in cyber security
-- Build or buy our own home
-- Have a flourishing fruit + veg garden
-- Write another album
-
 
 ---
 
